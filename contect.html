@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rupnit Photography Production</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="m-0 p-0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300 ease-in-out bg-transparent">
+    <div class="flex items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+   <a href="index.html" class="flex items-center">
+  <img src="img/png_logo-removebg-preview.png" alt="Rupnit Photography Production Logo" class="h-10 w-auto">
+</a>
+
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-white font-medium">
+        <li><a href="index.html" class="hover:text-pink-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-pink-500">About</a></li>
+
+        <!-- Dropdown Services -->
+        <li class="relative group">
+          <button class="flex items-center space-x-1 hover:text-pink-500">
+            <span>Services</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <ul class="absolute left-0  w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
+            <li><a href="wedding.html" class="block px-4 py-2 hover:bg-pink-100">Wedding</a></li>
+            <li><a href="pre-wedding.html" class="block px-4 py-2 hover:bg-pink-100">Pre-Wedding</a></li>
+            <li><a href="fashionshow.html" class="block px-4 py-2 hover:bg-pink-100">Fashion Show</a></li>
+            <li><a href="maternityshoot.html" class="block px-4 py-2 hover:bg-pink-100">Maternity Shoot</a></li>
+            <li><a href="event.html" class="block px-4 py-2 hover:bg-pink-100">Event Coverage</a></li>
+            <li><a href="indoorshoot.html" class="block px-4 py-2 hover:bg-pink-100">Indoor Shoot</a></li>
+            <li><a href="familyphoto.html" class="block px-4 py-2 hover:bg-pink-100">Family Photo Shoot</a></li>
+            <li><a href="professionalvideo.html" class="block px-4 py-2 hover:bg-pink-100">Professional Videography</a></li>
+            <li><a href="highquality.html" class="block px-4 py-2 hover:bg-pink-100">High Quality Photography</a></li>
+            <li><a href="graphices.html" class="block px-4 py-2 hover:bg-pink-100">Graphics Design</a></li>
+            <li><a href="videoediting.html" class="block px-4 py-2 hover:bg-pink-100">Video Editing</a></li>
+            <li><a href="customized.html" class="block px-4 py-2 hover:bg-pink-100">Customized Gifts</a></li>
+            <li><a href="invitationcards.html" class="block px-4 py-2 hover:bg-pink-100">Invitation Cards</a></li>
+          </ul>
+        </li>
+
+        <li><a href="elementsresort.html" class="hover:text-pink-500">Elements Resort</a></li>
+        <li><a href="contect.html" class="hover:text-pink-500">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black text-white px-6 pb-4 space-y-2">
+      <a href="index.html" class="block hover:text-pink-400">Home</a>
+      <a href="about.html" class="block hover:text-pink-400">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button id="mobile-dropdown-btn" class="w-full text-left flex justify-between items-center hover:text-pink-400">
+          Services
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
+        </button>
+        <div id="mobile-dropdown" class="hidden pl-4 space-y-1">
+          <a href="wedding.html" class="block hover:text-pink-400">Wedding</a>
+          <a href="pre-wedding.html" class="block hover:text-pink-400">Pre-Wedding</a>
+          <a href="fashionshow.html" class="block hover:text-pink-400">Fashion Show</a>
+          <a href="maternityshoot.html" class="block hover:text-pink-400">Maternity Shoot</a>
+          <a href="event.html" class="block hover:text-pink-400">Event Coverage</a>
+          <a href="indoorshoot.html" class="block hover:text-pink-400">Indoor Shoot</a>
+          <a href="familyphoto.html" class="block hover:text-pink-400">Family Photo Shoot</a>
+          <a href="professionalvideo.html" class="block hover:text-pink-400">Professional Videography</a>
+          <a href="highquality.html" class="block hover:text-pink-400">High Quality Photography</a>
+          <a href="graphices.html" class="block hover:text-pink-400">Graphics Design</a>
+          <a href="videoediting.html" class="block hover:text-pink-400">Video Editing</a>
+          <a href="customized.html" class="block hover:text-pink-400">Customized Gifts</a>
+          <a href="invitationcards.html" class="block hover:text-pink-400">Invitation Cards</a>
+        </div>
+      </div>
+
+      <a href="elementsresort.html" class="block hover:text-pink-400">Elements Resort</a>
+      <a href="contect.html" class="block hover:text-pink-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-[70vh] w-full relative">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+       alt="About Hero Image"
+       class="h-[70vh] w-full object-cover">
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Content Center -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-white text-5xl font-bold mb-4">About Us</h1>
+    <p class="text-white text-lg max-w-2xl">
+      Capturing moments that last a lifetime — learn more about our story and passion for photography.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Script for scroll + mobile toggle -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+    const mobileDropdown = document.getElementById("mobile-dropdown");
+
+    // Scroll effect
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.remove("bg-transparent");
+        navbar.classList.add("bg-black");
+      } else {
+        navbar.classList.remove("bg-black");
+        navbar.classList.add("bg-transparent");
+      }
+    });
+
+    // Mobile menu toggle
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Mobile dropdown toggle
+    mobileDropdownBtn.addEventListener("click", () => {
+      mobileDropdown.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+  <!-- comman style css -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-black text-gray-300 py-10 px-6 md:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Subsidiaries -->
+    <div>
+      <h3 class="text-lg font-bold text-white mb-4">OUR SUBSIDIARIES</h3>
+      <p>eCommerce: <a href="#" class="text-teal-400 hover:underline">CapturePro</a></p>
+      <p>Costumes Rental: <a href="#" class="text-teal-400 hover:underline">RentRobe</a></p>
+      <p>Decor: <a href="#" class="text-teal-400 hover:underline">ProDecor</a></p>
+    </div>
+
+    <!-- Office -->
+    <div>
+      <h3 class="text-lg font-bold text-white mb-4">OFFICE</h3>
+      <p>#12, Ashoka Pillar, 3rd Cross, 1st Block,<br>Jayanagar, Bangalore – 560011</p>
+      <p class="mt-2 flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0l4 4m-4-4l4-4" />
+        </svg>
+        <a href="mailto:RUPNIT PHOTOGRAPHY PRODUCTION.in@gmail.com" class="text-teal-400 hover:underline">RUPNIT PHOTOGRAPHY PRODUCTION.in@gmail.com</a>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h1.28a2 2 0 011.94 1.516l.67 3.006a2 2 0 01-.45 1.704l-1.52 1.82a16.001 16.001 0 006.586 6.586l1.82-1.52a2 2 0 011.704-.45l3.006.67a2 2 0 011.516 1.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <a href="tel:+919731828282" class="text-teal-400 hover:underline">+91-7509925761 </a>
+      </p>
+      <p class="mt-2">Business Hours: 10:00 am to 10:00 pm</p>
+    </div>
+
+    <!-- Contact Us -->
+    <div>
+      <h3 class="text-lg font-bold text-white mb-4">CONTACT US</h3>
+      <p class="mb-4">Stay in touch with us</p>
+      <div class="flex space-x-4">
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-teal-500 transition">
+          <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
+          <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 transition">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition">
+          <i class="fab fa-youtube text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-gray-700 my-6">
+
+  <!-- Bottom -->
+  <div class="text-center text-sm text-gray-500">
+    © 2010-2022 <span class="text-white">RUPNIT PHOTOGRAPHY PRODUCTION.in</span> | Bangalore, India | All Rights Reserved
+  </div>
+</footer>
+
+<!-- FontAwesome for social icons -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
