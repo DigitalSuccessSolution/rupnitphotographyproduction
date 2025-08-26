@@ -72,7 +72,7 @@
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
         </button>
         <div id="mobile-dropdown" class="hidden pl-4 space-y-1">
-          <a href="wedding.html" class="block hover:text-pink-400">Wedding</a>
+         <a href="wedding.html" class="block hover:text-pink-400">Wedding</a>
           <a href="pre-wedding.html" class="block hover:text-pink-400">Pre-Wedding</a>
           <a href="fashionshow.html" class="block hover:text-pink-400">Fashion Show</a>
           <a href="maternityshoot.html" class="block hover:text-pink-400">Maternity Shoot</a>
@@ -150,6 +150,289 @@
 
 
 
+ <style>
+        @import url('/img/png_logo-removebg-preview.png');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #faf7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .packages-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.03;
+            z-index: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath fill='%23800020' d='M40,80 C40,70 50,70 50,80 C50,90 40,90 40,80 M60,80 C60,70 70,70 70,80 C70,90 60,90 60,80 M80,80 C80,70 90,70 90,80 C90,90 80,90 80,80 M100,80 C100,70 110,70 110,80 C110,90 100,90 100,80 M120,80 C120,70 130,70 130,80 C130,90 120,90 120,80 M140,80 C140,70 150,70 150,80 C150,90 140,90 140,80'/%3E%3Cpath fill='%23800020' d='M50,40 C40,40 40,50 50,50 C60,50 60,40 50,40 M70,40 C60,40 60,50 70,50 C80,50 80,40 70,40 M90,40 C80,40 80,50 90,50 C100,50 100,40 90,40 M110,40 C100,40 100,50 110,50 C120,50 120,40 110,40 M130,40 C120,40 120,50 130,50 C140,50 140,40 130,40 M150,40 C140,40 140,50 150,50 C160,50 160,40 150,40'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            pointer-events: none;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #800020;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #800020;
+            margin: 15px auto;
+        }
+        
+        .packages-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .package-header {
+            background: linear-gradient(135deg, #800020, #a53860);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+        
+        .package-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .package-price {
+            font-size: 28px;
+            font-weight: 500;
+        }
+        
+        .package-features {
+            padding: 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-item:nth-child(odd) {
+            background-color: #fef9fb;
+        }
+        
+        .feature-icon {
+            margin-right: 15px;
+            color: #800020;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .included {
+            color: #2e8b57;
+        }
+        
+        .not-included {
+            color: #888;
+        }
+        
+        .footnote {
+            text-align: center;
+            margin-top: 40px;
+            font-weight: 500;
+            color: #555;
+            position: relative;
+            z-index: 1;
+            font-size: 16px;
+        }
+        
+        .ribbon {
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            transform: rotate(45deg);
+            padding: 5px 40px;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            background-color: #d4af37;
+            z-index: 2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .packages-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .package-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <section class="packages-container">
+        <div class="logo-bg"></div>
+        
+        <h2 class="section-title">Wedding & Reception Packages</h2>
+        
+        <div class="packages-grid">
+            <!-- Basic Package -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3 class="package-name">Basic</h3>
+                    <div class="package-price">₹ 35,000</div>
+                </div>
+                <ul class="package-features">
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Candid Photography</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Conventional Video</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
+                        <span class="feature-text">Cinematic Video</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
+                        <span class="feature-text">Conventional Photography</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
+                        <span class="feature-text">Drone (Reception Only)</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
+                        <span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Premium Package -->
+            <div class="package-card">
+                <div class="ribbon">POPULAR</div>
+                <div class="package-header">
+                    <h3 class="package-name">Premium</h3>
+                    <div class="package-price">₹ 75,000</div>
+                </div>
+                <ul class="package-features">
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Candid Photography</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Conventional Video</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Cinematic Video</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Conventional Photography</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
+                        <span class="feature-text">Drone (Reception Only)</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
+                        <span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Luxury Package -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3 class="package-name">Luxury</h3>
+                    <div class="package-price">₹ 90,000</div>
+                </div>
+                <ul class="package-features">
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Candid Photography</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Conventional Video</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Cinematic Video</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Conventional Photography</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">Drone (Reception Only)</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
+                        <span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <p class="footnote">Two Days shoot, upto 8 hours each</p>
+    </section>
 
 
 
@@ -166,21 +449,215 @@
 
 
 
-<footer class="bg-black text-gray-300 py-10 px-6 md:px-20">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<section class="connect-subscribe">
+  <div class="connect">
+    <h2 class="connect-heading">LET'S CONNECT.</h2>
+    <p class="connect-text">Check out our socials and feel free to connect!</p>
+    <div class="social-icons">
+      <a href="https://wa.me/7509925761" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/rupnitphotographyproduction.in/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/rupesh.dharpure.14" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="http://www.youtube.com/@rupnitphotographyproductio5284" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
 
-    <!-- Brand -->
-    <div>
+  <div class="subscribe">
+    <h2 class="connect-heading">GET THE LATEST.</h2>
+    <p class="connect-text">Subscribe to our mailing list to get the latest news of rupnitphotographyproduction.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Your e-mail address" required>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+    <p class="disclaimer">
+      By clicking SUBSCRIBE you are approving that we will keep you updated by email. <br>
+      <a href="#">Privacy policy.</a>
+    </p>
+  </div>
+</section>
+
+<style>
+.connect-subscribe {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 60px 40px 40px 40px; /* ✅ Added bottom padding for balance */
+    margin: 0;
+    align-items: flex-start;
+}
+
+.connect, .subscribe {
+    
+    margin: 0;
+    padding: 0;
+}
+
+.connect-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.connect-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 0; /* ✅ no extra gap */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon.whatsapp { background-color: #25D366; }
+.social-icon.instagram { background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 50%, #d6249f 75%, #285AEB 100%); }
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.youtube { background-color: #FF0000; }
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 240px;
+}
+
+.subscribe-form button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #800020;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.disclaimer a {
+    color: #800020;
+    text-decoration: underline;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+    .connect-subscribe {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px 20px 20px;
+        gap: 20px; /* ✅ Reduced gap */
+    }
+
+    .connect-heading {
+        font-size: 1.6rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 10px; /* ✅ Small spacing only */
+    }
+
+    .subscribe {
+        margin-top: 0; /* ✅ No extra gap above "GET THE LATEST" */
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .subscribe-form input[type="email"],
+    .subscribe-form button {
+        width: 100%;
+    }
+}
+</style>
+
+
+
+
+
+<footer class="bg-black text-gray-300 py-10 px-6 sm:px-10 md:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+
+    <!-- OUR BRAND -->
+    <div class="flex flex-col">
       <h3 class="text-lg font-bold text-white mb-4">OUR BRAND</h3>
+      <img src="img/png_logo-removebg-preview.png" alt="Rupnit Logo" class="mb-4 w-32 h-auto">
       <p class="text-teal-400 font-semibold">RUPNIT PHOTOGRAPHY PRODUCTION</p>
-      <p class="mt-2"> Pandhurna - 480334</p>
+      <p class="mt-2">Pandhurna - 480334</p>
       <p>Madhya Pradesh</p>
     </div>
 
-    <!-- Office -->
-    <div>
+    <!-- OFFICE -->
+    <div class="flex flex-col">
       <h3 class="text-lg font-bold text-white mb-4">OFFICE</h3>
       <p>SHOP NO - 30, Pardi Road, Opposite Bank of India,<br>Pandhurna, Madhya Pradesh - 480334</p>
+      <p class="mt-2">Business Hours: 10:00 am - 10:00 pm</p>
+
+      <!-- Google Map -->
+      <div class="mt-4 rounded overflow-hidden shadow-lg w-full">
+        <div class="aspect-w-16 aspect-h-9 relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945970.0587621127!2d76.536527!3d22.1566275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd5af40267d74e5%3A0x26c322c599d5e0d7!2sRUPNIT%20PHOTOGRAPH%20PRODUCTION%20PANDHURNA!5e0!3m2!1sen!2sin!4v1756126994952!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="absolute top-0 left-0 w-full h-full">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">CONTACT US</h3>
+      <p class="mb-4">Stay connected with us</p>
+
       <p class="mt-2 flex items-center space-x-2">
         <i class="fas fa-envelope text-teal-400"></i>
         <a href="mailto:rupnitpandhurna2025@gmail.com" class="text-teal-400 hover:underline">
@@ -199,27 +676,6 @@
         <i class="fab fa-whatsapp text-teal-400"></i>
         <a href="https://wa.me/917509925761" target="_blank" class="text-teal-400 hover:underline">WhatsApp: 7509925761</a>
       </p>
-      <p class="mt-2">Business Hours: 10:00 am - 10:00 pm</p>
-    </div>
-
-    <!-- Contact Us -->
-    <div>
-      <h3 class="text-lg font-bold text-white mb-4">CONTACT US</h3>
-      <p class="mb-4">Stay connected with us</p>
-      <div class="flex space-x-4">
-        <a href="https://wa.me/7509925761" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-teal-500 transition">
-          <i class="fab fa-whatsapp text-xl"></i>
-        </a>
-        <a href="https://www.facebook.com/rupesh.dharpure.14?mibextid=qi2Omg&rdid=x1YnA2xSJ85Vxm5M&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FihSY4zVgyzakmbAG%2F%3Fmibextid%3Dqi2Omg#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
-          <i class="fab fa-facebook-f text-xl"></i>
-        </a>
-        <a href="https://www.instagram.com/rupnitphotographyproduction.in/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 transition">
-          <i class="fab fa-instagram text-xl"></i>
-        </a>
-        <a href="http://www.youtube.com/@rupnitphotographyproductio5284" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition">
-          <i class="fab fa-youtube text-xl"></i>
-        </a>
-      </div>
     </div>
   </div>
 
@@ -231,6 +687,21 @@
   </div>
 </footer>
 
-<!-- ✅ Correct FontAwesome CDN -->
+<!-- FontAwesome -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+<!-- Aspect Ratio (for Tailwind v2 or v3 without plugin) -->
+<style>
+  .aspect-w-16 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+  }
+  .aspect-w-16 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+ 
 
