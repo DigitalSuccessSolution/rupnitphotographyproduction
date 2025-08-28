@@ -94,17 +94,17 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="h-[70vh] w-full relative">
-  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-       alt="About Hero Image"
+<section class="h-[70vh] w-full relative">
+  <img src="https://plus.unsplash.com/premium_photo-1661322695685-5144787d4199?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fE1hdGVybml0eSUyME1vbWVudHN8ZW58MHx8MHx8fDA%3D"
+       alt="Maternity Shoot Hero Image"
        class="h-[70vh] w-full object-cover">
   <div class="absolute inset-0 bg-black/40"></div>
 
   <!-- Content Center -->
   <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-    <h1 class="text-white text-5xl font-bold mb-4">About Us</h1>
+    <h1 class="text-white text-5xl font-bold mb-4">Maternity Moments</h1>
     <p class="text-white text-lg max-w-2xl">
-      Capturing moments that last a lifetime — learn more about our story and passion for photography.
+      Celebrating the beauty of motherhood — capturing your glowing journey with love and care.
     </p>
   </div>
 </section>
@@ -150,6 +150,298 @@
 
 
 
+<!-- section 1 start -->
+<style>
+        :root {
+            --primary-dark: #800020;
+            --primary-gold: #d4af37;
+            --primary-light: #f9f4f5;
+            --text-dark: #333333;
+            --text-light: #5a5a5a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .maternity-hero {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .maternity-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23800020' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.7;
+        }
+        
+        .premium-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
+            border-radius: 3px;
+        }
+        
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .content-text {
+            padding-right: 20px;
+        }
+        
+        .content-highlight {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            line-height: 1.4;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary-gold);
+        }
+        
+        .content-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .image-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        
+        .image-container:hover {
+            transform: perspective(1000px) rotateY(0deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-placeholder {
+            height: 500px;
+            background: linear-gradient(45deg, #f3e9e1 0%, #e8d5d0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .content-text {
+                padding-right: 0;
+                order: 2;
+            }
+            
+            .image-container {
+                transform: none;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .maternity-hero {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .content-highlight {
+                font-size: 1.5rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .image-placeholder {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .premium-container {
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .content-highlight {
+                font-size: 1.3rem;
+                padding-left: 15px;
+            }
+            
+            .content-description {
+                font-size: 1rem;
+            }
+            
+            .image-placeholder {
+                height: 300px;
+            }
+            
+            .section-tag {
+                font-size: 0.9rem;
+                letter-spacing: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="maternity-hero">
+        <div class="premium-container">
+            <div class="section-header">
+                <span class="section-tag">Celebrate Your Journey</span>
+                <h2 class="section-title">Maternity Photography</h2>
+            </div>
+            
+            <div class="content-wrapper">
+                <div class="content-text">
+                    <p class="content-highlight">Celebrate Motherhood with Classic Sidphoto – Maternity Photographer</p>
+                    
+                    <p class="content-description">
+                        This is a new age art, wherein the photographer captures pre motherhood. There are challenges, photographer has to blend-in to the mood-swings of the mother-to-be and maintain all safety standards, yet click amazing photos. Team sidphoto.in has Subject Matter Experts (SME) for maternity and has completed more than 1000 successful maternity shoots.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Successful Shoots</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Expert</div>
+                            <div class="stat-label">Maternity Team</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        Maternity Photography Showcase
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -157,11 +449,518 @@
 
 
 
+<!-- section 3 start -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #fafafa;
+        color: #333;
+    }
+
+    /* --------------------
+       Gallery Section
+    -------------------- */
+    .gallery-section {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 60px 40px;
+        background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+        border-radius: 16px;
+        box-shadow: 0 20px 40px rgba(128, 0, 32, 0.08);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+    }
+
+    .gallery-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .gallery-title {
+        color: #800020;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .gallery-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+        margin: 15px auto 0;
+        border-radius: 3px;
+    }
+
+    .gallery-subtitle {
+        color: #666;
+        font-size: 1.1rem;
+        font-weight: 400;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .gallery-item {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(128, 0, 32, 0.08);
+        transition: all 0.3s ease;
+        border-left: 4px solid #800020;
+        background: #fff;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(128, 0, 32, 0.15);
+    }
+
+    /* Alternate accent color */
+    .gallery-item:nth-child(even) {
+        border-left-color: #d4af37;
+    }
+
+    .gallery-img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gallery-overlay {
+        padding: 20px;
+    }
+
+    .gallery-caption {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .gallery-photographer {
+        font-size: 0.9rem;
+        color: #555;
+        display: flex;
+        align-items: center;
+    }
+
+    .gallery-photographer i {
+        margin-right: 8px;
+        color: #800020;
+    }
+
+    .gallery-item:nth-child(even) .gallery-photographer i {
+        color: #d4af37;
+    }
+
+    .view-more-btn {
+        display: block;
+        width: 200px;
+        margin: 50px auto 0;
+        padding: 15px 25px;
+        background: transparent;
+        border: 2px solid #800020;
+        color: #800020;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .view-more-btn:hover {
+        background: #800020;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(128, 0, 32, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .gallery-container {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-title {
+            font-size: 2rem;
+        }
+
+        .gallery-section {
+            padding: 40px 20px;
+        }
+
+        .gallery-img {
+            height: 220px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery-title {
+            font-size: 1.8rem;
+        }
+
+        .gallery-subtitle {
+            font-size: 1rem;
+        }
+
+        .gallery-img {
+            height: 180px;
+        }
+    }
+</style>
+
+<section class="gallery-section">
+    <div class="gallery-header">
+        <h2 class="gallery-title">Gallery of Wedding Photographers</h2>
+        <p class="gallery-subtitle">Capturing timeless moments of love and celebration through the lenses of our talented photographers</p>
+    </div>
+
+    <div class="gallery-container">
+        <!-- Row 1 -->
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Golden Hour Romance</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> James Anderson</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Elegant Ceremony</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Sarah Mitchell</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">First Dance</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Michael Roberts</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Bridal Preparation</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Emma Wilson</p></div></div>
+
+        <!-- Row 2 -->
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Vows Exchange</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> David Chen</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Beach Celebration</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Olivia Parker</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Sunset Embrace</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Robert Johnson</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Traditional Rituals</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Priya Sharma</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Reception Joy</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Thomas Wright</p></div></div>
+
+        <!-- Row 3 -->
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Romantic Stroll</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Jennifer Lopez</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Garden Celebration</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Andrew Taylor</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Candlelight Dinner</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Sophia Martinez</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Bridal Party</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> William Brown</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Mountain Vows</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Daniel Kim</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Classic Portraits</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Natalie Portman</p></div></div>
+
+        <!-- Row 4 -->
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Ring Exchange</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Christopher Evans</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Cultural Traditions</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Aisha Khan</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Laughter & Joy</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Brian Miller</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Grand Entrance</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Victoria Adams</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Sparkler Exit</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Ryan Cooper</p></div></div>
+
+        <!-- Row 5 -->
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Intimate Moments</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Grace Lee</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Elegant Details</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Paul Richardson</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Toast to Love</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Melissa Grant</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Historic Venue</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> George Walker</p></div></div>
+
+        <!-- Row 6 -->
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Cake Cutting</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Hannah Baker</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Golden Kiss</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Kevin Harris</p></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481653125770-b78c206c59d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmd8ZW58MHx8MHx8fDA%3D" class="gallery-img"><div class="gallery-overlay"><h3 class="gallery-caption">Fairytale Ending</h3><p class="gallery-photographer"><i class="fas fa-camera"></i> Lisa Morgan</p></div></div>
+    </div>
+
+    <a href="#" class="view-more-btn">View More Work</a>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+        });
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        }
+
+        function showItemsOnScroll() {
+            galleryItems.forEach(item => {
+                if (isInViewport(item)) {
+                    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        showItemsOnScroll();
+        window.addEventListener('scroll', showItemsOnScroll);
+    });
+</script>
+<!-- section 3 end -->
 
 
 
 
+<!-- section 3.0 video start -->
 
+
+<!-- Cinematic Video Gallery Section -->
+<section style="padding: 40px 20px; text-align: center; background: #fafafa;">
+  <h2 style="font-size: 24px; font-weight: bold; color: #800020; margin-bottom: 30px;">
+    Cinematic Video Gallery
+  </h2>
+
+  <!-- Main Video -->
+  <div style="max-width: 900px; margin: 0 auto 30px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="500" 
+      src="https://www.youtube.com/embed/2Vv-BfVoq4g" 
+      title="Wedding Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Small Videos Row -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto;">
+    <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <iframe width="100%" height="200" 
+        src="https://www.youtube.com/embed/pRpeEdMmmQ0" 
+        title="Wedding Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <iframe width="100%" height="200" 
+        src="https://www.youtube.com/embed/JGwWNGJdvx8" 
+        title="Wedding Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <iframe width="100%" height="200" 
+        src="https://www.youtube.com/embed/kJQP7kiw5Fk" 
+        title="Wedding Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- section 3.0 video end -->
+
+
+
+
+<!-- ✅ Maternity FAQ Section Start -->
+<style>
+.faq-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(128, 0, 32, 0.08);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+}
+
+.faq-heading {
+    color: #800020;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.faq-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+/* Accordion */
+.faq-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(128, 0, 32, 0.08);
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-left: 4px solid #800020;
+    transition: all 0.3s ease;
+}
+
+.faq-item.open {
+    border-left-color: #d4af37;
+    box-shadow: 0 12px 25px rgba(128, 0, 32, 0.15);
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px;
+    cursor: pointer;
+    color: #800020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background: rgba(128,0,32,0.05);
+}
+
+.faq-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+    color: #800020;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+    color: #d4af37;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 400px;
+    padding: 0 20px 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-heading {
+        font-size: 2rem;
+    }
+
+    .faq-section {
+        padding: 40px 20px;
+    }
+}
+</style>
+
+<section class="faq-section">
+  <h2 class="faq-heading">Maternity Shoot FAQs</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      When is the best time to schedule a maternity shoot?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      The ideal time for a maternity shoot is between the 28th to 34th week of pregnancy. During this time, the baby bump is prominent and the mom-to-be usually feels more comfortable.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What should I wear for a maternity photoshoot?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      We recommend flowy dresses, solid colors, or pastels. We also provide styling assistance and wardrobe options. Comfort and elegance are key!
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can my partner or kids be part of the shoot?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Absolutely! We encourage including your partner and children to make the session more personal and memorable.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do you offer indoor and outdoor maternity shoots?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Yes, we offer both. You can choose to shoot at our studio, your home, or an outdoor location depending on your comfort and style preference.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How long does a maternity shoot session last?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Typically, a session lasts between 1.5 to 2 hours depending on the number of outfit changes and locations involved.
+    </div>
+  </div>
+</section>
+
+<script>
+// Accordion Toggle Script
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const faqItem = button.parentElement;
+    faqItem.classList.toggle("open");
+
+    // Toggle icon + / −
+    const icon = button.querySelector(".faq-icon");
+    icon.textContent = faqItem.classList.contains("open") ? "−" : "+";
+  });
+});
+</script>
 
 
 
