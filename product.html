@@ -735,123 +735,719 @@ container.addEventListener('dragstart', (e) => e.preventDefault());
 
 
 
-<section class="why-section">
-  <h2 class="heading-red">For Every Occasion</h2>
+<section class="occasion-section">
+  <div class="container">
+    <h2 class="heading-red text-center">What’s The Occasion?</h2>
+    <p class="text-center small mb-4">elevate every moment with thoughtful gifting solutions</p>
+    <ul class="occasion-list">
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/birthday-cake--v1.png" alt="Birthday Icon" />
+        </div>
+        <span>Birthday</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/party-popper.png" alt="Anniversary Icon" />
+        </div>
+        <span>Anniversary</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/housewarming.png" alt="Housewarming Icon" />
+        </div>
+        <span>Housewarming</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/wedding-bells.png" alt="Weddings Icon" />
+        </div>
+        <span>Weddings</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/baby-shower.png" alt="Baby Shower Icon" />
+        </div>
+        <span>Baby Shower</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/handshake.png" alt="Congratulations Icon" />
+        </div>
+        <span>Congratulations</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/gift.png" alt="Farewell Icon" />
+        </div>
+        <span>Farewell</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/flower-basket.png" alt="Get Well Soon Icon" />
+        </div>
+        <span>Get Well Soon</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/wedding-rings.png" alt="Proposal Icon" />
+        </div>
+        <span>Proposal</span>
+      </li>
 
-  <div class="occasion-grid">
-    <!-- Anniversary Gifts -->
-    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1623581714407-6cf92d56b15e');">
-      <div class="occasion-overlay">
-        <h3><span>Anniversary</span><br>Gifts</h3>
-      </div>
-    </div>
-
-    <!-- Birthday Gifts -->
-    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1584824486539-53bb4646bdbc');">
-      <div class="occasion-overlay">
-        <h3><span>Birthday</span><br>Gifts</h3>
-      </div>
-    </div>
-
-    <!-- Wedding Gifts -->
-    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1542204165-65bf26472b9b');">
-      <div class="occasion-overlay">
-        <h3><span>Wedding</span><br>Gifts</h3>
-      </div>
-    </div>
-
-    <!-- Love & Romance -->
-    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1527477396000-e27163b481c9');">
-      <div class="occasion-overlay">
-        <h3><span class="love">Love &</span><br>Romance</h3>
-      </div>
-    </div>
+      <li>
+        <div class="icon-circle">
+          <img src="https://img.icons8.com/ios/64/000000/wedding-rings.png" alt="Proposal Icon" />
+        </div>
+        <span>event</span>
+      </li>
+    </ul>
   </div>
 </section>
+
 <style>
-    /* ---- Existing reuse classes assumed: .why-section and .heading-red ---- */
+  /* Occasion Section */
 
-/* Grid container */
-.occasion-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* Each card */
-.occasion-card {
-  position: relative;
-  height: 260px;
+.occasion-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
   border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(128, 0, 32, 0.08);
+  position: relative;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.occasion-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Overlay at bottom */
-.occasion-overlay {
+.occasion-section::before {
+  content: '';
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  color: white;
-  transition: background 0.3s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
 }
 
-.occasion-overlay h3 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.3;
-  font-family: 'Poppins', sans-serif;
-}
-
-.occasion-overlay h3 span {
+.occasion-section .heading-red {
+  color: #800020;
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
 }
 
-.occasion-overlay h3 span.love {
-  color: #ff4d6d;
-  font-style: italic;
+.occasion-section .heading-red::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+  margin: 15px auto 0;
+  border-radius: 3px;
 }
 
-/* Responsive tweaks */
+.occasion-section p.small {
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.occasion-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.occasion-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #111;
+  cursor: default;
+}
+
+.icon-circle {
+  background-color: #fcecd7; /* soft peach */
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(128, 0, 32, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.icon-circle img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: invert(15%) sepia(50%) saturate(300%) hue-rotate(335deg) brightness(0.8);
+}
+
+.occasion-list li:hover .icon-circle {
+  box-shadow: 0 6px 18px rgba(128, 0, 32, 0.2);
+}
+
+.occasion-list li span {
+  display: block;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Responsive */
+
 @media (max-width: 768px) {
-  .occasion-overlay h3 {
-    font-size: 1.4rem;
+  .occasion-section {
+    padding: 40px 20px;
   }
 
-  .occasion-card {
-    height: 220px;
+  .occasion-section .heading-red {
+    font-size: 2rem;
+  }
+
+  .occasion-list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+  }
+
+  .icon-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icon-circle img {
+    width: 40px;
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .occasion-grid {
-    grid-template-columns: 1fr;
+  .occasion-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
-
-  .occasion-card {
-    height: 200px;
+  
+  .icon-circle {
+    width: 80px;
+    height: 80px;
   }
-
-  .occasion-overlay h3 {
-    font-size: 1.2rem;
+  
+  .icon-circle img {
+    width: 35px;
+    height: 35px;
   }
 }
 
 </style>
+
+
+
+
+
+
+
+
+
+
+<!-- product price section start -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product Filtering Responsive</title>
+<style>
+  /* Basic Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  /* Circle Filters */
+  .circle-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .circle-filter {
+    background: #ddd;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+    user-select: none;
+  }
+  .circle-filter:hover {
+    background: #aaa;
+  }
+  .circle-filter.active {
+    background: #007BFF;
+    color: white;
+    font-weight: 700;
+  }
+
+  /* Filter Buttons */
+  .filter-buttons {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .filter-buttons button {
+    background: #eee;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+  }
+  .filter-buttons button:hover {
+    background: #ccc;
+  }
+  .filter-buttons button.active {
+    background: #007BFF;
+    color: white;
+    font-weight: 700;
+  }
+
+  /* Products Grid */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgb(0 0 0 / 0.2);
+  }
+  .product-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+  .product-card h4 {
+    font-size: 16px;
+    margin: 8px 0;
+    height: 40px;
+    overflow: hidden;
+  }
+  .price {
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 6px;
+  }
+  .rating {
+    font-size: 14px;
+    color: #555;
+  }
+
+  /* Responsive for small screens */
+  @media (max-width: 600px) {
+    .circle-filters {
+      gap: 12px;
+    }
+    .circle-filter {
+      width: 60px;
+      height: 60px;
+      font-size: 11px;
+      padding: 8px;
+    }
+    .filter-buttons button {
+      padding: 8px 14px;
+      font-size: 13px;
+      margin: 5px 6px;
+    }
+    .product-list {
+      display: block; /* Stack vertically */
+    }
+    .product-card {
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+    .product-card img {
+      height: 180px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Circle Filters -->
+<div class="circle-filters">
+  <div class="circle-filter" data-filter="30min">Same Day (5)</div>
+  <div class="circle-filter" data-filter="anniversary">Anniversary (3)</div>
+  <div class="circle-filter" data-filter="birthday">Birthday (7)</div>
+  <div class="circle-filter" data-filter="caricature">Caricature (3)</div>
+  <div class="circle-filter" data-filter="photo">Photo (2)</div>
+  <div class="circle-filter" data-filter="name">Name (1)</div>
+  <div class="circle-filter" data-filter="jewellery">Jewellery (2)</div>
+  <div class="circle-filter" data-filter="bestseller">Best Seller (8)</div>
+</div>
+
+<!-- Filter Buttons -->
+<div class="filter-buttons">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="frames">Frames</button>
+  <button data-filter="keychain">Keychain</button>
+  <button data-filter="handal-mug">Handal Mug</button>
+  <button data-filter="printing-tshirt">Printing T-Shirt</button>
+  <button data-filter="promotion-tshirt">Promotion T-Shirt</button>
+  <button data-filter="3d-4d">3D/4D</button>
+  <button data-filter="leds">LEDs</button>
+</div>
+
+<!-- Products -->
+<div class="product-list">
+  <!-- Sample Products for Frames (total 9) -->
+  <div class="product-card" data-category="frames">
+    <img src="images/frame1.png" alt="Frame 1" />
+    <h4>Classic Wooden Frame</h4>
+    <p class="price">₹250</p>
+    <div class="rating">⭐ 4.5 (30)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame2.png" alt="Frame 2" />
+    <h4>Modern Frame</h4>
+    <p class="price">₹300</p>
+    <div class="rating">⭐ 4.7 (28)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame3.png" alt="Frame 3" />
+    <h4>Designer Frame</h4>
+    <p class="price">₹400</p>
+    <div class="rating">⭐ 4.6 (25)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame4.png" alt="Frame 4" />
+    <h4>Classic Golden Frame</h4>
+    <p class="price">₹450</p>
+    <div class="rating">⭐ 4.8 (20)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame5.png" alt="Frame 5" />
+    <h4>Wooden Photo Frame</h4>
+    <p class="price">₹350</p>
+    <div class="rating">⭐ 4.4 (18)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame6.png" alt="Frame 6" />
+    <h4>Rustic Frame</h4>
+    <p class="price">₹280</p>
+    <div class="rating">⭐ 4.3 (16)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame7.png" alt="Frame 7" />
+    <h4>Elegant Silver Frame</h4>
+    <p class="price">₹500</p>
+    <div class="rating">⭐ 4.9 (12)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame8.png" alt="Frame 8" />
+    <h4>Classic Black Frame</h4>
+    <p class="price">₹320</p>
+    <div class="rating">⭐ 4.5 (22)</div>
+  </div>
+  <div class="product-card" data-category="frames">
+    <img src="images/frame9.png" alt="Frame 9" />
+    <h4>Minimalist Frame</h4>
+    <p class="price">₹270</p>
+    <div class="rating">⭐ 4.2 (15)</div>
+  </div>
+
+  <!-- Keychains (9 products) -->
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain13.png" alt="Alphabet Keychain" />
+    <h4>Alphabet Keychain</h4>
+    <p class="price">₹210</p>
+    <div class="rating">⭐ 4.4 (40)</div>
+  </div>
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain14.png" alt="Custom Shape Keychain" />
+    <h4>Custom Shape Keychain</h4>
+    <p class="price">₹270</p>
+    <div class="rating">⭐ 4.7 (48)</div>
+  </div>
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain15.png" alt="Wood & Metal Mix Keychain" />
+    <h4>Wood & Metal Mix Keychain</h4>
+    <p class="price">₹280</p>
+    <div class="rating">⭐ 4.6 (50)</div>
+  </div>
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain16.png" alt="Engraved Photo Keychain" />
+    <h4>Engraved Photo Keychain</h4>
+    <p class="price">₹300</p>
+    <div class="rating">⭐ 4.8 (55)</div>
+  </div>
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain17.png" alt="Keychain with Tassels" />
+    <h4>Keychain with Tassels</h4>
+    <p class="price">₹210</p>
+    <div class="rating">⭐ 4.4 (43)</div>
+  </div>
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain18.png" alt="Simple Plastic Keychain" />
+    <h4>Simple Plastic Keychain</h4>
+    <p class="price">₹180</p>
+    <div class="rating">⭐ 4.1 (30)</div>
+  </div>
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain19.png" alt="Colorful Keychain Set" />
+    <h4>Colorful Keychain Set</h4>
+    <p class="price">₹350</p>
+    <div class="rating">⭐ 4.7 (70)</div>
+  </div>
+  <!-- Additional 2 keychains for total 9 -->
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain20.png" alt="Leather Keychain" />
+    <h4>Leather Keychain</h4>
+    <p class="price">₹250</p>
+    <div class="rating">⭐ 4.3 (28)</div>
+  </div>
+  <div class="product-card" data-category="keychain">
+    <img src="images/keychain21.png" alt="Metallic Keychain" />
+    <h4>Metallic Keychain</h4>
+    <p class="price">₹290</p>
+    <div class="rating">⭐ 4.5 (35)</div>
+  </div>
+
+  <!-- Handal Mug (5 products) -->
+  <div class="product-card" data-category="handal-mug">
+    <img src="images/handal1.png" alt="Classic Handal Mug" />
+    <h4>Classic Handal Mug</h4>
+    <p class="price">₹299</p>
+    <div class="rating">⭐ 4.5 (30)</div>
+  </div>
+  <div class="product-card" data-category="handal-mug">
+    <img src="images/handal2.png" alt="Printed Handal Mug" />
+    <h4>Printed Handal Mug</h4>
+    <p class="price">₹349</p>
+    <div class="rating">⭐ 4.6 (25)</div>
+  </div>
+  <div class="product-card" data-category="handal-mug">
+    <img src="images/handal3.png" alt="Custom Handal Mug" />
+    <h4>Custom Handal Mug</h4>
+    <p class="price">₹399</p>
+    <div class="rating">⭐ 4.7 (28)</div>
+  </div>
+  <div class="product-card" data-category="handal-mug">
+    <img src="images/handal4.png" alt="Color Changing Handal Mug" />
+    <h4>Color Changing Handal Mug</h4>
+    <p class="price">₹450</p>
+    <div class="rating">⭐ 4.8 (22)</div>
+  </div>
+  <div class="product-card" data-category="handal-mug">
+    <img src="images/handal5.png" alt="Photo Print Handal Mug" />
+    <h4>Photo Print Handal Mug</h4>
+    <p class="price">₹420</p>
+    <div class="rating">⭐ 4.7 (26)</div>
+  </div>
+
+  <!-- Printing Tshirt (4 products) -->
+  <div class="product-card" data-category="printing-tshirt">
+    <img src="images/tshirt1.png" alt="Printed Cotton T-Shirt" />
+    <h4>Printed Cotton T-Shirt</h4>
+    <p class="price">₹599</p>
+    <div class="rating">⭐ 4.4 (40)</div>
+  </div>
+  <div class="product-card" data-category="printing-tshirt">
+    <img src="images/tshirt2.png" alt="Graphic Print T-Shirt" />
+    <h4>Graphic Print T-Shirt</h4>
+    <p class="price">₹650</p>
+    <div class="rating">⭐ 4.5 (38)</div>
+  </div>
+  <div class="product-card" data-category="printing-tshirt">
+    <img src="images/tshirt3.png" alt="Custom Printed T-Shirt" />
+    <h4>Custom Printed T-Shirt</h4>
+    <p class="price">₹700</p>
+    <div class="rating">⭐ 4.6 (35)</div>
+  </div>
+  <div class="product-card" data-category="printing-tshirt">
+    <img src="images/tshirt4.png" alt="Printed Sports T-Shirt" />
+    <h4>Printed Sports T-Shirt</h4>
+    <p class="price">₹720</p>
+    <div class="rating">⭐ 4.7 (32)</div>
+  </div>
+
+  <!-- Promotion Tshirt (3 products) -->
+  <div class="product-card" data-category="promotion-tshirt">
+    <img src="images/promotion1.png" alt="Corporate Promotion T-Shirt" />
+    <h4>Corporate Promotion T-Shirt</h4>
+    <p class="price">₹650</p>
+    <div class="rating">⭐ 4.5 (20)</div>
+  </div>
+  <div class="product-card" data-category="promotion-tshirt">
+    <img src="images/promotion2.png" alt="Event Promotion T-Shirt" />
+    <h4>Event Promotion T-Shirt</h4>
+    <p class="price">₹670</p>
+    <div class="rating">⭐ 4.6 (18)</div>
+  </div>
+  <div class="product-card" data-category="promotion-tshirt">
+    <img src="images/promotion3.png" alt="Custom Logo Promotion T-Shirt" />
+    <h4>Custom Logo Promotion T-Shirt</h4>
+    <p class="price">₹690</p>
+    <div class="rating">⭐ 4.7 (22)</div>
+  </div>
+
+  <!-- 3D/4D images (2 products) -->
+  <div class="product-card" data-category="3d-4d">
+    <img src="images/3d1.png" alt="3D Printed Photo" />
+    <h4>3D Printed Photo</h4>
+    <p class="price">₹1200</p>
+    <div class="rating">⭐ 4.8 (15)</div>
+  </div>
+  <div class="product-card" data-category="3d-4d">
+    <img src="images/3d2.png" alt="4D Holographic Print" />
+    <h4>4D Holographic Print</h4>
+    <p class="price">₹1500</p>
+    <div class="rating">⭐ 4.9 (10)</div>
+  </div>
+
+  <!-- LEDs (2 products) -->
+  <div class="product-card" data-category="leds">
+    <img src="images/led1.png" alt="LED Night Light" />
+    <h4>LED Night Light</h4>
+    <p class="price">₹899</p>
+    <div class="rating">⭐ 4.6 (25)</div>
+  </div>
+  <div class="product-card" data-category="leds">
+    <img src="images/led2.png" alt="LED Decorative Lamp" />
+    <h4>LED Decorative Lamp</h4>
+    <p class="price">₹1200</p>
+    <div class="rating">⭐ 4.7 (30)</div>
+  </div>
+</div>
+
+<!-- JS Filtering -->
+<script>
+  const buttons = document.querySelectorAll('.filter-buttons button');
+  const circleFilters = document.querySelectorAll('.circle-filter');
+  const products = document.querySelectorAll('.product-card');
+
+  // Utility: Remove active from all buttons & circle filters
+  function clearActive() {
+    buttons.forEach(btn => btn.classList.remove('active'));
+    circleFilters.forEach(cf => cf.classList.remove('active'));
+  }
+
+  // Filter function
+  function filterProducts(category) {
+    products.forEach(product => {
+      if(category === 'all' || product.dataset.category === category) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+
+  // Button click event
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      clearActive();
+      button.classList.add('active');
+      filterProducts(button.dataset.filter);
+    });
+  });
+
+  // Circle filter click event
+  circleFilters.forEach(circle => {
+    circle.addEventListener('click', () => {
+      clearActive();
+      circle.classList.add('active');
+      // For simplicity, no category match on circle filters in this demo
+      filterProducts('all');
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<section style="position: relative; width: 100%; max-width: none; margin: 40px 0; display: flex; gap: 50px; align-items: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff8f0; padding: 20px 40px; border-radius: 10px; box-sizing: border-box;">
+
+  <!-- Decorative leaves (you can replace these URLs with your own or remove if not needed) -->
+  <img src="https://i.imgur.com/XhmVkMi.png" alt="" style="position: absolute; top: 0; left: 0; width: 150px; opacity: 0.15; pointer-events: none;" />
+  <img src="https://i.imgur.com/XhmVkMi.png" alt="" style="position: absolute; bottom: 0; right: 0; width: 150px; opacity: 0.15; pointer-events: none;" />
+
+  <!-- Image collage -->
+  <div style="display: grid; grid-template-columns: repeat(3, 150px); grid-template-rows: repeat(3, 150px); gap: 12px; max-width: 460px; max-height: 460px; z-index: 1;">
+
+    <img src="images/kids-eating.jpg" alt="Children eating meal" style="grid-column: 1; grid-row: 1 / 3; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 3px 7px rgba(0,0,0,0.2);" />
+    
+    <img src="images/meal-children-2.jpg" alt="Children with meal bowls" style="grid-column: 2 / 4; grid-row: 1 / 3; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 3px 7px rgba(0,0,0,0.2);" />
+    
+    <img src="images/child-writing-1.jpg" alt="Child writing" style="grid-column: 1; grid-row: 3; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 3px 7px rgba(0,0,0,0.2);" />
+    
+    <img src="images/child-smiling.jpg" alt="Smiling child" style="grid-column: 2; grid-row: 3; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 3px 7px rgba(0,0,0,0.2);" />
+    
+    <img src="images/small-group-kids.jpg" alt="Group of kids" style="grid-column: 3; grid-row: 3; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 3px 7px rgba(0,0,0,0.2);" />
+    
+    <img src="images/kids-classroom.jpg" alt="Kids in classroom" style="grid-column: 3; grid-row: 1; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 3px 7px rgba(0,0,0,0.2);" />
+
+  </div>
+
+  <!-- Text content -->
+  <div style="max-width: 520px; color: #3e3e3e; font-size: 18px; line-height: 1.6; z-index: 1;">
+
+    <h2 style="font-weight: 700; font-size: 32px; margin-bottom: 20px;">Gift with a Cause</h2>
+
+    <p>Embark on a delightful journey of giving with <strong>The Gift Studio!</strong> As you explore the perfect presents for your <strong>cherished</strong> ones, amplify the joy by contributing to the <strong>well-being</strong> of our nation.</p>
+
+    <p>At <strong>The Gift Studio</strong>, our commitment goes beyond just gifting – we are on a mission to provide midday meals and education to children in rural India. When you make a purchase, 1% of the proceeds <strong>directly contribute</strong> to nurturing these young minds.</p>
+
+    <p>Picture this: every 8 hampers sold, contribute to the holistic development of a child. <strong>Join us in creating a meaningful impact—one gift at a time!</strong></p>
+
+  </div>
+
+</section>
+
+
+ 
 
 
 
@@ -946,9 +1542,6 @@ container.addEventListener('dragstart', (e) => e.preventDefault());
 
 </style>
 <!-- Gender Categories Section End -->
-
- 
-
 
 
 
