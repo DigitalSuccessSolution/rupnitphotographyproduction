@@ -32,7 +32,7 @@
             <span>Services</span>
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
           </button>
-          <!-- Dropdown Menu -->
+         <!-- Dropdown Menu -->
           <ul class="absolute left-0  w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
             <li><a href="wedding.html" class="block px-4 py-2 hover:bg-pink-100">Wedding</a></li>
             <li><a href="pre-wedding.html" class="block px-4 py-2 hover:bg-pink-100">Pre-Wedding</a></li>
@@ -49,7 +49,7 @@
             <li><a href="invitationcards.html" class="block px-4 py-2 hover:bg-pink-100">Invitation Cards</a></li>
           </ul>
         </li>
-
+ <li><a href="product.html" class="hover:text-pink-500">product</a></li>
         <li><a href="elementsresort.html" class="hover:text-pink-500">Elements Resort</a></li>
         <li><a href="contect.html" class="hover:text-pink-500">Contact</a></li>
       </ul>
@@ -87,27 +87,298 @@
           <a href="invitationcards.html" class="block hover:text-pink-400">Invitation Cards</a>
         </div>
       </div>
-
+ <a href="product.html" class="block hover:text-pink-400">product</a>
       <a href="elementsresort.html" class="block hover:text-pink-400">Elements Resort</a>
       <a href="contect.html" class="block hover:text-pink-400">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="h-[70vh] w-full relative">
-  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-       alt="About Hero Image"
-       class="h-[70vh] w-full object-cover">
-  <div class="absolute inset-0 bg-black/40"></div>
+    <style>
+        :root {
+            --primary-dark: #800020;
+            --primary-gold: #d4af37;
+            --primary-light: #f9f4f5;
+            --text-dark: #333333;
+            --text-light: #5a5a5a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            height: 100vh;
+            min-height: 700px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(128, 0, 32, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.5s forwards;
+        }
+        
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease 0.8s forwards;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease 1.1s forwards;
+        }
+        
+        .hero-text {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease 1.4s forwards;
+        }
+        
+        .highlight {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+        
+        .hero-divider {
+            width: 80px;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 25px auto;
+            opacity: 0;
+            animation: fadeIn 1s ease 1.7s forwards;
+        }
+        
+        .impact-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeIn 1s ease 2s forwards;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .hero-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 600px;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .hero-text {
+                font-size: 1rem;
+                max-width: 90%;
+            }
+            
+            .impact-stats {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .stat-item {
+                flex: 0 0 calc(50% - 15px);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-tag {
+                font-size: 0.9rem;
+                letter-spacing: 3px;
+            }
+            
+            .impact-stats {
+                gap: 20px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 
-  <!-- Content Center -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-    <h1 class="text-white text-5xl font-bold mb-4">About Us</h1>
-    <p class="text-white text-lg max-w-2xl">
-      Capturing moments that last a lifetime — learn more about our story and passion for photography.
-    </p>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="img/Gemini_Generated_Image_w8mripw8mripw8mr.png"
+             alt="Children eating" class="hero-image">
+        <div class="hero-overlay"></div>
+
+        <!-- Content Center -->
+        <div class="hero-content">
+            <span class="hero-tag">Making a Difference</span>
+            <h1 class="hero-title">Gift with a Cause</h1>
+            
+            <h2 class="hero-subtitle">Make a Difference</h2>
+            <p class="hero-text">
+                Support <span class="highlight">The Gift Studio</span> in providing meals and education to children in rural India.
+            </p>
+            
+            <div class="hero-divider"></div>
+    
+    </section>
+
+
+    <script>
+        // Simple animation control
+        document.addEventListener('DOMContentLoaded', function() {
+            // Replay animations when section comes into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Reset and replay animations
+                        const animatedElements = entry.target.querySelectorAll('[class*="hero-"]');
+                        animatedElements.forEach(el => {
+                            const style = window.getComputedStyle(el);
+                            if (style.animationName !== 'none') {
+                                el.style.animation = 'none';
+                                setTimeout(() => {
+                                    el.style.animation = '';
+                                }, 10);
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            const heroSection = document.querySelector('.hero-section');
+            observer.observe(heroSection);
+        });
+    </script>
 
 
   <!-- Script for scroll + mobile toggle -->
@@ -155,6 +426,616 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Photography Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #800020;
+            --primary-gold: #d4af37;
+            --primary-light: #f9f4f5;
+            --text-dark: #333333;
+            --text-light: #5a5a5a;
+            --accent-light: #f8f0e9;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfcfc;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Section Header Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
+            border-radius: 3px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+        
+        .service-icon i {
+            font-size: 32px;
+            color: var(--primary-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon i {
+            color: white;
+        }
+        
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%);
+            position: relative;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            height: 300px;
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(128, 0, 32, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-item:hover .portfolio-image {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-title {
+            color: white;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-category {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.1s;
+        }
+        
+        .portfolio-item:hover .portfolio-title,
+        .portfolio-item:hover .portfolio-category {
+            transform: translateY(0);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+        
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, var(--primary-dark) 0%, #6a001a 100%);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .submit-button:hover {
+            background: linear-gradient(90deg, #6a001a 0%, var(--primary-dark) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .services-section,
+            .portfolio-section,
+            .contact-section {
+                padding: 70px 0;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+            
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-container {
+                padding: 30px;
+            }
+            
+            .portfolio-item {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            .section-title {
+                font-size: 1.9rem;
+            }
+            
+            .section-tag {
+                font-size: 0.9rem;
+                letter-spacing: 3px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-item {
+                height: 220px;
+            }
+            
+            .contact-form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">A glimpse into what we offer to perfectly capture your special moments.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h3>Wedding Photography</h3>
+                    <p>From pre-wedding shoots to the grand day, we immortalize every sacred moment with elegance and emotion.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Professional Videography</h3>
+                    <p>High-quality video production for events, corporate needs, and stunning cinematic highlight reels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Maternity & Baby Shoots</h3>
+                    <p>We create a beautiful and comfortable environment to capture the glow of new beginnings.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Customized Gifts</h3>
+                    <p>Turn your favorite memories into personalized keepsakes like photo albums, mugs, and frames.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphics & Design</h3>
+                    <p>Our creative team offers graphic design services for logos, banners, and digital content.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Event Coverage</h3>
+                    <p>Professional coverage for all your special events, ensuring every important detail is captured.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title">Our Portfolio</h2>
+                <p class="section-subtitle">Discover our best work and get inspired by the stories we've told.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Professional portrait" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Professional Portrait</h3>
+                        <p class="portfolio-category">Portrait Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1549419137-023a1005a74e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding couple" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Wedding Couple</h3>
+                        <p class="portfolio-category">Wedding Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1542456041-944a30a113a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion shoot" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Fashion Shoot</h3>
+                        <p class="portfolio-category">Fashion Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1590740608795-35073e51410d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Maternity shoot" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Maternity Shoot</h3>
+                        <p class="portfolio-category">Maternity Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1543085603-91b5c98c1995?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Candid street photography" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Street Photography</h3>
+                        <p class="portfolio-category">Candid Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1596765798485-649033331a98?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product photography" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Product Showcase</h3>
+                        <p class="portfolio-category">Product Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1627876800049-301217e997f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Drone view of a resort" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Aerial View</h3>
+                        <p class="portfolio-category">Drone Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1628172825482-1a2c30f402c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Family photo" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Family Portrait</h3>
+                        <p class="portfolio-category">Family Photography</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Book Your Shoot Today</h2>
+                <p class="section-subtitle">Fill out the form below and we will get back to you to discuss your project.</p>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Interested Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Select a service --</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="pre-wedding">Pre-Wedding</option>
+                            <option value="fashionshow">Fashion Show</option>
+                            <option value="maternity">Maternity Shoot</option>
+                            <option value="event">Event Coverage</option>
+                            <option value="videography">Professional Videography</option>
+                            <option value="graphics">Graphics Design</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add subtle animations to elements when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            // Observe portfolio items
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
 
 
 
@@ -164,55 +1045,233 @@
 
 
 
+<section class="connect-subscribe">
+  <div class="connect">
+    <h2 class="connect-heading">LET'S CONNECT.</h2>
+    <p class="connect-text">Check out our socials and feel free to connect!</p>
+    <div class="social-icons">
+      <a href="https://wa.me/7509925761" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/rupnitphotographyproduction.in/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/rupesh.dharpure.14" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="http://www.youtube.com/@rupnitphotographyproductio5284" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
 
-<footer class="bg-black text-gray-300 py-10 px-6 md:px-20">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+  <div class="subscribe">
+    <h2 class="connect-heading">GET THE LATEST.</h2>
+    <p class="connect-text">Subscribe to our mailing list to get the latest news of rupnitphotographyproduction.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Your e-mail address" required>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+    <p class="disclaimer">
+      By clicking SUBSCRIBE you are approving that we will keep you updated by email. <br>
+      <a href="#">Privacy policy.</a>
+    </p>
+  </div>
+</section>
 
-    <!-- Subsidiaries -->
-    <div>
-      <h3 class="text-lg font-bold text-white mb-4">OUR SUBSIDIARIES</h3>
-      <p>eCommerce: <a href="#" class="text-teal-400 hover:underline">CapturePro</a></p>
-      <p>Costumes Rental: <a href="#" class="text-teal-400 hover:underline">RentRobe</a></p>
-      <p>Decor: <a href="#" class="text-teal-400 hover:underline">ProDecor</a></p>
+<style>
+.connect-subscribe {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 60px 40px 40px 40px; /* ✅ Added bottom padding for balance */
+    margin: 0;
+    align-items: flex-start;
+}
+
+.connect, .subscribe {
+    
+    margin: 0;
+    padding: 0;
+}
+
+.connect-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.connect-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 0; /* ✅ no extra gap */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon.whatsapp { background-color: #25D366; }
+.social-icon.instagram { background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 50%, #d6249f 75%, #285AEB 100%); }
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.youtube { background-color: #FF0000; }
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 240px;
+}
+
+.subscribe-form button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #800020;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.disclaimer a {
+    color: #800020;
+    text-decoration: underline;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+    .connect-subscribe {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px 20px 20px;
+        gap: 20px; /* ✅ Reduced gap */
+    }
+
+    .connect-heading {
+        font-size: 1.6rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 10px; /* ✅ Small spacing only */
+    }
+
+    .subscribe {
+        margin-top: 0; /* ✅ No extra gap above "GET THE LATEST" */
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .subscribe-form input[type="email"],
+    .subscribe-form button {
+        width: 100%;
+    }
+}
+</style>
+
+
+
+
+
+<footer class="bg-black text-gray-300 py-10 px-6 sm:px-10 md:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+
+    <!-- OUR BRAND -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">OUR BRAND</h3>
+      <img src="img/png_logo-removebg-preview.png" alt="Rupnit Logo" class="mb-4 w-32 h-auto">
+      <p class="text-teal-400 font-semibold">RUPNIT PHOTOGRAPHY PRODUCTION</p>
+      <p class="mt-2">Pandhurna - 480334</p>
+      <p>Madhya Pradesh</p>
     </div>
 
-    <!-- Office -->
-    <div>
+    <!-- OFFICE -->
+    <div class="flex flex-col">
       <h3 class="text-lg font-bold text-white mb-4">OFFICE</h3>
-      <p>#12, Ashoka Pillar, 3rd Cross, 1st Block,<br>Jayanagar, Bangalore – 560011</p>
-      <p class="mt-2 flex items-center space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0l4 4m-4-4l4-4" />
-        </svg>
-        <a href="mailto:RUPNIT PHOTOGRAPHY PRODUCTION.in@gmail.com" class="text-teal-400 hover:underline">RUPNIT PHOTOGRAPHY PRODUCTION.in@gmail.com</a>
-      </p>
-      <p class="mt-2 flex items-center space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h1.28a2 2 0 011.94 1.516l.67 3.006a2 2 0 01-.45 1.704l-1.52 1.82a16.001 16.001 0 006.586 6.586l1.82-1.52a2 2 0 011.704-.45l3.006.67a2 2 0 011.516 1.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-        <a href="tel:+919731828282" class="text-teal-400 hover:underline">+91-7509925761 </a>
-      </p>
-      <p class="mt-2">Business Hours: 10:00 am to 10:00 pm</p>
+      <p>SHOP NO - 30, Pardi Road, Opposite Bank of India,<br>Pandhurna, Madhya Pradesh - 480334</p>
+      <p class="mt-2">Business Hours: 10:00 am - 10:00 pm</p>
+
+      <!-- Google Map -->
+      <div class="mt-4 rounded overflow-hidden shadow-lg w-full">
+        <div class="aspect-w-16 aspect-h-9 relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945970.0587621127!2d76.536527!3d22.1566275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd5af40267d74e5%3A0x26c322c599d5e0d7!2sRUPNIT%20PHOTOGRAPH%20PRODUCTION%20PANDHURNA!5e0!3m2!1sen!2sin!4v1756126994952!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="absolute top-0 left-0 w-full h-full">
+          </iframe>
+        </div>
+      </div>
     </div>
 
-    <!-- Contact Us -->
-    <div>
+    <!-- CONTACT US -->
+    <div class="flex flex-col">
       <h3 class="text-lg font-bold text-white mb-4">CONTACT US</h3>
-      <p class="mb-4">Stay in touch with us</p>
-      <div class="flex space-x-4">
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-teal-500 transition">
-          <i class="fab fa-whatsapp text-xl"></i>
+      <p class="mb-4">Stay connected with us</p>
+
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-envelope text-teal-400"></i>
+        <a href="mailto:rupnitpandhurna2025@gmail.com" class="text-teal-400 hover:underline">
+          rupnitpandhurna2025@gmail.com
         </a>
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
-          <i class="fab fa-facebook-f text-xl"></i>
-        </a>
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 transition">
-          <i class="fab fa-instagram text-xl"></i>
-        </a>
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition">
-          <i class="fab fa-youtube text-xl"></i>
-        </a>
-      </div>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-envelope text-teal-400"></i>
+        <span class="text-teal-400">RUPNITPANDHURNA@2025</span>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-phone-alt text-teal-400"></i>
+        <a href="tel:+917509925761" class="text-teal-400 hover:underline">+91-7509925761</a>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fab fa-whatsapp text-teal-400"></i>
+        <a href="https://wa.me/917509925761" target="_blank" class="text-teal-400 hover:underline">WhatsApp: 7509925761</a>
+      </p>
     </div>
   </div>
 
@@ -220,9 +1279,25 @@
 
   <!-- Bottom -->
   <div class="text-center text-sm text-gray-500">
-    © 2010-2022 <span class="text-white">RUPNIT PHOTOGRAPHY PRODUCTION.in</span> | Bangalore, India | All Rights Reserved
+    © 2010-2025 <span class="text-white">RUPNIT PHOTOGRAPHY PRODUCTION</span> | Pandhurna, Madhya Pradesh | All Rights Reserved
   </div>
 </footer>
 
-<!-- FontAwesome for social icons -->
-<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+<!-- FontAwesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+<!-- Aspect Ratio (for Tailwind v2 or v3 without plugin) -->
+<style>
+  .aspect-w-16 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+  }
+  .aspect-w-16 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+ 
+
