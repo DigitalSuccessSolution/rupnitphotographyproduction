@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add inside <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Add in <head> if not already -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rupnit Photography Production</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="m-0 p-0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300 ease-in-out bg-transparent">
+    <div class="flex items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+   <a href="index.html" class="flex items-center">
+  <img src="img/png_logo-removebg-preview.png" alt="Rupnit Photography Production Logo" class="h-10 w-auto">
+</a>
+
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-white font-medium">
+        <li><a href="index.html" class="hover:text-pink-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-pink-500">About</a></li>
+
+        <!-- Dropdown Services -->
+        <li class="relative group">
+          <button class="flex items-center space-x-1 hover:text-pink-500">
+            <span>Services</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <ul class="absolute left-0  w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
+            <li><a href="wedding.html" class="block px-4 py-2 hover:bg-pink-100">Wedding</a></li>
+            <li><a href="pre-wedding.html" class="block px-4 py-2 hover:bg-pink-100">Pre-Wedding</a></li>
+            <li><a href="fashionshow.html" class="block px-4 py-2 hover:bg-pink-100">Fashion Show</a></li>
+            <li><a href="maternityshoot.html" class="block px-4 py-2 hover:bg-pink-100">Maternity Shoot</a></li>
+            <li><a href="event.html" class="block px-4 py-2 hover:bg-pink-100">Event Coverage</a></li>
+            <li><a href="indoorshoot.html" class="block px-4 py-2 hover:bg-pink-100">Indoor Shoot</a></li>
+            <li><a href="familyphoto.html" class="block px-4 py-2 hover:bg-pink-100">Family Photo Shoot</a></li>
+            <li><a href="professionalvideo.html" class="block px-4 py-2 hover:bg-pink-100">Professional Videography</a></li>
+            <li><a href="highquality.html" class="block px-4 py-2 hover:bg-pink-100">High Quality Photography</a></li>
+            <li><a href="graphices.html" class="block px-4 py-2 hover:bg-pink-100">Graphics Design</a></li>
+            <li><a href="videoediting.html" class="block px-4 py-2 hover:bg-pink-100">Video Editing</a></li>
+            <li><a href="customized.html" class="block px-4 py-2 hover:bg-pink-100">Customized Gifts</a></li>
+            <li><a href="invitationcards.html" class="block px-4 py-2 hover:bg-pink-100">Invitation Cards</a></li>
+          </ul>
+        </li>
+
+        <li><a href="elementsresort.html" class="hover:text-pink-500">Elements Resort</a></li>
+        <li><a href="contect.html" class="hover:text-pink-500">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black text-white px-6 pb-4 space-y-2">
+      <a href="index.html" class="block hover:text-pink-400">Home</a>
+      <a href="about.html" class="block hover:text-pink-400">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button id="mobile-dropdown-btn" class="w-full text-left flex justify-between items-center hover:text-pink-400">
+          Services
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
+        </button>
+        <div id="mobile-dropdown" class="hidden pl-4 space-y-1">
+         <a href="wedding.html" class="block hover:text-pink-400">Wedding</a>
+          <a href="pre-wedding.html" class="block hover:text-pink-400">Pre-Wedding</a>
+          <a href="fashionshow.html" class="block hover:text-pink-400">Fashion Show</a>
+          <a href="maternityshoot.html" class="block hover:text-pink-400">Maternity Shoot</a>
+          <a href="event.html" class="block hover:text-pink-400">Event Coverage</a>
+          <a href="indoorshoot.html" class="block hover:text-pink-400">Indoor Shoot</a>
+          <a href="familyphoto.html" class="block hover:text-pink-400">Family Photo Shoot</a>
+          <a href="professionalvideo.html" class="block hover:text-pink-400">Professional Videography</a>
+          <a href="highquality.html" class="block hover:text-pink-400">High Quality Photography</a>
+          <a href="graphices.html" class="block hover:text-pink-400">Graphics Design</a>
+          <a href="videoediting.html" class="block hover:text-pink-400">Video Editing</a>
+          <a href="customized.html" class="block hover:text-pink-400">Customized Gifts</a>
+          <a href="invitationcards.html" class="block hover:text-pink-400">Invitation Cards</a>
+        </div>
+      </div>
+
+      <a href="elementsresort.html" class="block hover:text-pink-400">Elements Resort</a>
+      <a href="contect.html" class="block hover:text-pink-400">Contact</a>
+    </div>
+  </nav>
+
+<!-- Hero Section - Product Page -->
+<section class="h-[70vh] w-full relative">
+  <img src="https://plus.unsplash.com/premium_photo-1670715051484-f5e9ede3d6a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y3VzdG1pc2UlMjBpbWFnZXMlMjBnaWZ0c3xlbnwwfHwwfHx8MA%3D%3D"
+       alt="Studio Light Pro 300X"
+       class="h-[70vh] w-full object-cover">
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Content Center -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-white text-4xl md:text-5xl font-bold mb-4">Studio Light Pro 300X</h1>
+    <p class="text-white text-lg max-w-2xl mb-6">
+      Illuminate your indoor shoots with precision. Our best-selling studio light offers adjustable brightness, soft glow, and seamless performance.
+    </p>
+    <a href="#buy-now" class="bg-white text-black px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">
+      Shop Now
+    </a>
+  </div>
+</section>
+
+
+
+
+  <!-- Script for scroll + mobile toggle -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+    const mobileDropdown = document.getElementById("mobile-dropdown");
+
+    // Scroll effect
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.remove("bg-transparent");
+        navbar.classList.add("bg-black");
+      } else {
+        navbar.classList.remove("bg-black");
+        navbar.classList.add("bg-transparent");
+      }
+    });
+
+    // Mobile menu toggle
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Mobile dropdown toggle
+    mobileDropdownBtn.addEventListener("click", () => {
+      mobileDropdown.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+  <!-- comman style css -->
+
+
+
+
+
+
+<!-- Category Section Start -->
+<section class="category-section">
+  <div class="category-scroll">
+    
+    <!-- Example Category Box -->
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-1.png" alt="Offers">
+      </div>
+      <p>OFFERS</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-2.png" alt="Gardening">
+      </div>
+      <p>GARDENING</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-3.png" alt="Plants">
+      </div>
+      <p>PLANTS</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-4.png" alt="Seeds">
+      </div>
+      <p>SEEDS</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-5.png" alt="Bulbs">
+      </div>
+      <p>BULBS</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-6.png" alt="Pots">
+      </div>
+      <p>POTS</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-7.png" alt="Fertilizers">
+      </div>
+      <p>FERTILIZERS</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-8.png" alt="Corporate">
+      </div>
+      <p>CORPORATE</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-9.png" alt="Pebbles">
+      </div>
+      <p>PEBBLES</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-10.png" alt="Accessories">
+      </div>
+      <p>ACCESSORIES</p>
+    </div>
+
+     <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-9.png" alt="Pebbles">
+      </div>
+      <p>PEBBLES</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-10.png" alt="Accessories">
+      </div>
+      <p>ACCESSORIES</p>
+    </div>
+ <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-9.png" alt="Pebbles">
+      </div>
+      <p>PEBBLES</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-10.png" alt="Accessories">
+      </div>
+      <p>ACCESSORIES</p>
+    </div>
+ <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-9.png" alt="Pebbles">
+      </div>
+      <p>PEBBLES</p>
+    </div>
+
+    <div class="category-box">
+      <div class="category-icon">
+        <img src="images/h-10.png" alt="Accessories">
+      </div>
+      <p>ACCESSORIES</p>
+    </div>
+
+
+  </div>
+</section>
+
+<style>
+    /* Category Section */
+.category-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  overflow-x: auto;
+}
+
+.category-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.category-box {
+  flex: 0 0 auto;
+  width: 80px;
+  margin-right: 16px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.category-box p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+.category-box:hover .category-icon {
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .category-box {
+    width: 70px;
+  }
+
+  .category-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .category-box p {
+    font-size: 13px;
+  }
+}
+
+</style>
+<!-- Category Section End -->
+
+
+
+
+
+
+<!-- section 1 start  -->
+
+
+<!-- Image Comparison Slider -->
+<div class="image-compare-container">
+  <div class="image-compare-wrapper" id="compareWrapper">
+    <img src="https://via.placeholder.com/600x400?text=Before+Image" alt="Before" class="compare-img compare-img-before">
+    <img src="https://via.placeholder.com/600x400?text=After+Image" alt="After" class="compare-img compare-img-after" id="afterImage">
+    <div class="compare-slider" id="slider">
+      <div class="arrow left">&#8592;</div>
+      <div class="arrow right">&#8594;</div>
+    </div>
+  </div>
+</div>
+
+<style>
+    .image-compare-container {
+    max-width: 100%;
+    margin: 50px auto 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.image-compare-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: ew-resize;
+    user-select: none;
+}
+
+.compare-img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: none;
+    border-radius: 12px;
+}
+
+.compare-img-before {
+    z-index: 1;
+}
+
+.compare-img-after {
+    z-index: 2;
+    width: 50%;
+    overflow: hidden;
+    clip-path: inset(0 50% 0 0); /* Initial 50% view */
+    transition: clip-path 0.3s ease;
+}
+
+.compare-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #d4af37;
+    z-index: 3;
+    cursor: ew-resize;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.compare-slider .arrow {
+    color: #fff;
+    background: #800020;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .compare-slider .arrow {
+        font-size: 14px;
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+<!-- start -->
+
+<section class="why-section image-comparison-section">
+  <!-- Section Top Border -->
+  <!-- (This is already handled by ::before pseudo-element in .why-section) -->
+
+  <!-- Section Heading -->
+  <div class="section-header">
+    <h2 class="heading-red">Before & After Comparison</h2>
+  </div>
+
+  <!-- Image Comparison Wrapper -->
+  <div class="comparison-container" id="comparisonContainer">
+    <!-- Before Image -->
+    <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+         alt="Before image"
+         class="comparison-image before-image" />
+
+    <!-- After Image -->
+    <img src="https://media.istockphoto.com/id/2156987632/photo/woman-opening-package-with-thank-you-card-in-box.webp?a=1&b=1&s=612x612&w=0&k=20&c=2qQs6puy3AUJk-aM0LHgqvkAFKa9tw1FoJ1PJoP45i4=" 
+         alt="After image"
+         class="comparison-image after-image"
+         id="afterImage" />
+
+    <!-- Slider Handle -->
+    <div class="slider-handle" id="sliderHandle">
+      <div class="slider-button">
+        <i class="fas fa-arrows-left-right"></i>
+      </div>
+    </div>
+
+    <!-- Labels -->
+    <div class="image-labels">
+      <span class="label label-before">Before</span>
+      <span class="label label-after">After</span>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <p class="instructions">Drag the slider to compare the images</p>
+</section>
+
+
+<script>
+    const container = document.getElementById('comparisonContainer');
+const afterImage = document.getElementById('afterImage');
+const sliderHandle = document.getElementById('sliderHandle');
+
+let isDragging = false;
+
+function moveSlider(clientX) {
+  const rect = container.getBoundingClientRect();
+  let position = ((clientX - rect.left) / rect.width) * 100;
+  position = Math.max(0, Math.min(100, position));
+
+  afterImage.style.clipPath = `polygon(0 0, ${position}% 0, ${position}% 100%, 0 100%)`;
+  sliderHandle.style.left = `${position}%`;
+}
+
+container.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  moveSlider(e.clientX);
+});
+
+document.addEventListener('mouseup', () => isDragging = false);
+document.addEventListener('mousemove', (e) => {
+  if (isDragging) moveSlider(e.clientX);
+});
+
+container.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  moveSlider(e.touches[0].clientX);
+});
+
+document.addEventListener('touchend', () => isDragging = false);
+document.addEventListener('touchmove', (e) => {
+  if (isDragging) moveSlider(e.touches[0].clientX);
+});
+
+container.addEventListener('dragstart', (e) => e.preventDefault());
+
+</script>
+
+
+<style>
+    /* ---------------------------
+   Image Comparison Section
+--------------------------- */
+.image-comparison-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(128, 0, 32, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-comparison-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+}
+
+/* Heading reused from your theme */
+.image-comparison-section .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.image-comparison-section .heading-red {
+    color: #800020;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.image-comparison-section .heading-red::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+/* Comparison Container */
+.comparison-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+}
+
+.comparison-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-image {
+    z-index: 1;
+}
+
+.after-image {
+    z-index: 2;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    transition: clip-path 0.3s ease;
+}
+
+/* Slider Handle */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #d4af37;
+    z-index: 3;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+
+.slider-handle:hover {
+    width: 6px;
+    background: linear-gradient(to bottom, #d4af37, #800020);
+}
+
+/* Slider Button (center circle) */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #800020;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    transition: all 0.3s ease;
+}
+
+.slider-button:hover {
+    background: #d4af37;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.slider-button i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(3px); }
+    100% { transform: translateX(0); }
+}
+
+/* Labels */
+.image-labels {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.label {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.label-before {
+    margin-right: auto;
+}
+
+.label-after {
+    margin-left: auto;
+}
+
+/* Instructions */
+.instructions {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: #5a5a5a;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .comparison-container {
+        height: 400px;
+    }
+
+    .image-comparison-section .heading-red {
+        font-size: 2rem;
+    }
+
+    .slider-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .comparison-container {
+        height: 300px;
+    }
+
+    .image-comparison-section .heading-red {
+        font-size: 1.8rem;
+    }
+
+    .label {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .instructions {
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+
+<!-- end -->
+
+
+
+
+
+<section class="why-section">
+  <h2 class="heading-red">For Every Occasion</h2>
+
+  <div class="occasion-grid">
+    <!-- Anniversary Gifts -->
+    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1623581714407-6cf92d56b15e');">
+      <div class="occasion-overlay">
+        <h3><span>Anniversary</span><br>Gifts</h3>
+      </div>
+    </div>
+
+    <!-- Birthday Gifts -->
+    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1584824486539-53bb4646bdbc');">
+      <div class="occasion-overlay">
+        <h3><span>Birthday</span><br>Gifts</h3>
+      </div>
+    </div>
+
+    <!-- Wedding Gifts -->
+    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1542204165-65bf26472b9b');">
+      <div class="occasion-overlay">
+        <h3><span>Wedding</span><br>Gifts</h3>
+      </div>
+    </div>
+
+    <!-- Love & Romance -->
+    <div class="occasion-card" style="background-image: url('https://images.unsplash.com/photo-1527477396000-e27163b481c9');">
+      <div class="occasion-overlay">
+        <h3><span class="love">Love &</span><br>Romance</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+    /* ---- Existing reuse classes assumed: .why-section and .heading-red ---- */
+
+/* Grid container */
+.occasion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Each card */
+.occasion-card {
+  position: relative;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.occasion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay at bottom */
+.occasion-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.occasion-overlay h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  font-family: 'Poppins', sans-serif;
+}
+
+.occasion-overlay h3 span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.occasion-overlay h3 span.love {
+  color: #ff4d6d;
+  font-style: italic;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .occasion-overlay h3 {
+    font-size: 1.4rem;
+  }
+
+  .occasion-card {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .occasion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .occasion-card {
+    height: 200px;
+  }
+
+  .occasion-overlay h3 {
+    font-size: 1.2rem;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<section class="connect-subscribe">
+  <div class="connect">
+    <h2 class="connect-heading">LET'S CONNECT.</h2>
+    <p class="connect-text">Check out our socials and feel free to connect!</p>
+    <div class="social-icons">
+      <a href="https://wa.me/7509925761" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/rupnitphotographyproduction.in/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/rupesh.dharpure.14" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="http://www.youtube.com/@rupnitphotographyproductio5284" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="subscribe">
+    <h2 class="connect-heading">GET THE LATEST.</h2>
+    <p class="connect-text">Subscribe to our mailing list to get the latest news of rupnitphotographyproduction.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Your e-mail address" required>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+    <p class="disclaimer">
+      By clicking SUBSCRIBE you are approving that we will keep you updated by email. <br>
+      <a href="#">Privacy policy.</a>
+    </p>
+  </div>
+</section>
+
+<style>
+.connect-subscribe {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 60px 40px 40px 40px; /* ✅ Added bottom padding for balance */
+    margin: 0;
+    align-items: flex-start;
+}
+
+.connect, .subscribe {
+    
+    margin: 0;
+    padding: 0;
+}
+
+.connect-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.connect-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 0; /* ✅ no extra gap */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon.whatsapp { background-color: #25D366; }
+.social-icon.instagram { background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 50%, #d6249f 75%, #285AEB 100%); }
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.youtube { background-color: #FF0000; }
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 240px;
+}
+
+.subscribe-form button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #800020;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.disclaimer a {
+    color: #800020;
+    text-decoration: underline;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+    .connect-subscribe {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px 20px 20px;
+        gap: 20px; /* ✅ Reduced gap */
+    }
+
+    .connect-heading {
+        font-size: 1.6rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 10px; /* ✅ Small spacing only */
+    }
+
+    .subscribe {
+        margin-top: 0; /* ✅ No extra gap above "GET THE LATEST" */
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .subscribe-form input[type="email"],
+    .subscribe-form button {
+        width: 100%;
+    }
+}
+</style>
+
+
+
+
+
+<footer class="bg-black text-gray-300 py-10 px-6 sm:px-10 md:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+
+    <!-- OUR BRAND -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">OUR BRAND</h3>
+      <img src="img/png_logo-removebg-preview.png" alt="Rupnit Logo" class="mb-4 w-32 h-auto">
+      <p class="text-teal-400 font-semibold">RUPNIT PHOTOGRAPHY PRODUCTION</p>
+      <p class="mt-2">Pandhurna - 480334</p>
+      <p>Madhya Pradesh</p>
+    </div>
+
+    <!-- OFFICE -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">OFFICE</h3>
+      <p>SHOP NO - 30, Pardi Road, Opposite Bank of India,<br>Pandhurna, Madhya Pradesh - 480334</p>
+      <p class="mt-2">Business Hours: 10:00 am - 10:00 pm</p>
+
+      <!-- Google Map -->
+      <div class="mt-4 rounded overflow-hidden shadow-lg w-full">
+        <div class="aspect-w-16 aspect-h-9 relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945970.0587621127!2d76.536527!3d22.1566275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd5af40267d74e5%3A0x26c322c599d5e0d7!2sRUPNIT%20PHOTOGRAPH%20PRODUCTION%20PANDHURNA!5e0!3m2!1sen!2sin!4v1756126994952!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="absolute top-0 left-0 w-full h-full">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">CONTACT US</h3>
+      <p class="mb-4">Stay connected with us</p>
+
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-envelope text-teal-400"></i>
+        <a href="mailto:rupnitpandhurna2025@gmail.com" class="text-teal-400 hover:underline">
+          rupnitpandhurna2025@gmail.com
+        </a>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-envelope text-teal-400"></i>
+        <span class="text-teal-400">RUPNITPANDHURNA@2025</span>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-phone-alt text-teal-400"></i>
+        <a href="tel:+917509925761" class="text-teal-400 hover:underline">+91-7509925761</a>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fab fa-whatsapp text-teal-400"></i>
+        <a href="https://wa.me/917509925761" target="_blank" class="text-teal-400 hover:underline">WhatsApp: 7509925761</a>
+      </p>
+    </div>
+  </div>
+
+  <hr class="border-gray-700 my-6">
+
+  <!-- Bottom -->
+  <div class="text-center text-sm text-gray-500">
+    © 2010-2025 <span class="text-white">RUPNIT PHOTOGRAPHY PRODUCTION</span> | Pandhurna, Madhya Pradesh | All Rights Reserved
+  </div>
+</footer>
+
+<!-- FontAwesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+<!-- Aspect Ratio (for Tailwind v2 or v3 without plugin) -->
+<style>
+  .aspect-w-16 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+  }
+  .aspect-w-16 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+ 
+
