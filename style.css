@@ -474,4 +474,53 @@
                 padding: 40px 20px;
             }
         }
+
+
  
+       
+        /* Global Button Style */
+.service-button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.service-button a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: white;
+    color: #800020;
+    border: 1px solid #800020;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.service-button a:hover {
+    background-color: #d4af37;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
