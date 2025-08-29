@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rupnit Photography Production</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="m-0 p-0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300 ease-in-out bg-transparent">
+    <div class="flex items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+   <a href="index.html" class="flex items-center">
+  <img src="img/png_logo-removebg-preview.png" alt="Rupnit Photography Production Logo" class="h-10 w-auto">
+</a>
+
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-white font-medium">
+        <li><a href="index.html" class="hover:text-pink-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-pink-500">About</a></li>
+
+        <!-- Dropdown Services -->
+        <li class="relative group">
+          <button class="flex items-center space-x-1 hover:text-pink-500">
+            <span>Services</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
+          </button>
+         <!-- Dropdown Menu -->
+          <ul class="absolute left-0  w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
+            <li><a href="wedding.html" class="block px-4 py-2 hover:bg-pink-100">Wedding</a></li>
+            <li><a href="pre-wedding.html" class="block px-4 py-2 hover:bg-pink-100">Pre-Wedding</a></li>
+            <li><a href="fashionshow.html" class="block px-4 py-2 hover:bg-pink-100">Fashion Show</a></li>
+            <li><a href="maternityshoot.html" class="block px-4 py-2 hover:bg-pink-100">Maternity Shoot</a></li>
+            <li><a href="event.html" class="block px-4 py-2 hover:bg-pink-100">Event Coverage</a></li>
+            <li><a href="indoorshoot.html" class="block px-4 py-2 hover:bg-pink-100">Indoor Shoot</a></li>
+            <li><a href="familyphoto.html" class="block px-4 py-2 hover:bg-pink-100">Family Photo Shoot</a></li>
+            <li><a href="professionalvideo.html" class="block px-4 py-2 hover:bg-pink-100">Professional Videography</a></li>
+            <li><a href="highquality.html" class="block px-4 py-2 hover:bg-pink-100">High Quality Photography</a></li>
+            <li><a href="graphices.html" class="block px-4 py-2 hover:bg-pink-100">Graphics Design</a></li>
+            <li><a href="videoediting.html" class="block px-4 py-2 hover:bg-pink-100">Video Editing</a></li>
+            <li><a href="invitationcards.html" class="block px-4 py-2 hover:bg-pink-100">Invitation Cards</a></li>
+          </ul>
+        </li>
+ <li><a href="product.html" class="hover:text-pink-500">product</a></li>
+        <li><a href="elementsresort.html" class="hover:text-pink-500">Elements Resort</a></li>
+        <li><a href="contect.html" class="hover:text-pink-500">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black text-white px-6 pb-4 space-y-2">
+      <a href="index.html" class="block hover:text-pink-400">Home</a>
+      <a href="about.html" class="block hover:text-pink-400">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button id="mobile-dropdown-btn" class="w-full text-left flex justify-between items-center hover:text-pink-400">
+          Services
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" /></svg>
+        </button>
+        <div id="mobile-dropdown" class="hidden pl-4 space-y-1">
+         <a href="wedding.html" class="block hover:text-pink-400">Wedding</a>
+          <a href="pre-wedding.html" class="block hover:text-pink-400">Pre-Wedding</a>
+          <a href="fashionshow.html" class="block hover:text-pink-400">Fashion Show</a>
+          <a href="maternityshoot.html" class="block hover:text-pink-400">Maternity Shoot</a>
+          <a href="event.html" class="block hover:text-pink-400">Event Coverage</a>
+          <a href="indoorshoot.html" class="block hover:text-pink-400">Indoor Shoot</a>
+          <a href="familyphoto.html" class="block hover:text-pink-400">Family Photo Shoot</a>
+          <a href="professionalvideo.html" class="block hover:text-pink-400">Professional Videography</a>
+          <a href="highquality.html" class="block hover:text-pink-400">High Quality Photography</a>
+          <a href="graphices.html" class="block hover:text-pink-400">Graphics Design</a>
+          <a href="videoediting.html" class="block hover:text-pink-400">Video Editing</a>
+         
+          <a href="invitationcards.html" class="block hover:text-pink-400">Invitation Cards</a>
+        </div>
+      </div>
+ <a href="product.html" class="block hover:text-pink-400">product</a>
+      <a href="elementsresort.html" class="block hover:text-pink-400">Elements Resort</a>
+      <a href="contect.html" class="block hover:text-pink-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ✅ Hero Section – Event Coverage -->
+<section class="h-[70vh] w-full relative">
+  <img 
+    src="https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D" 
+    alt="All Services Hero Image"
+    class="h-[70vh] w-full object-cover"
+  >
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Content Center -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-white text-5xl font-bold mb-4">Our Services</h1>
+    <p class="text-white text-lg max-w-2xl">
+      From photography and videography to complete event coverage — we offer customized solutions for every need with creativity, professionalism, and passion.
+    </p>
+  </div>
+</section>
+
+
+
+
+  <!-- Script for scroll + mobile toggle -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+    const mobileDropdown = document.getElementById("mobile-dropdown");
+
+    // Scroll effect
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.remove("bg-transparent");
+        navbar.classList.add("bg-black");
+      } else {
+        navbar.classList.remove("bg-black");
+        navbar.classList.add("bg-transparent");
+      }
+    });
+
+    // Mobile menu toggle
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Mobile dropdown toggle
+    mobileDropdownBtn.addEventListener("click", () => {
+      mobileDropdown.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+  <!-- comman style css -->
+
+
+
+
+ <!-- section event 1 start -->
+
+<!-- ✅ Why Should You Hire – Event Coverage Section -->
+
+    <style>
+        :root {
+            --primary-dark: #800020;
+            --primary-gold: #d4af37;
+            --primary-light: #f9f4f5;
+            --text-dark: #333333;
+            --text-light: #5a5a5a;
+            --accent-light: #f8f0e9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #fcfcfc;
+            padding: 20px;
+        }
+        
+        .why-section {
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
+            border-radius: 20px;
+            padding: 70px 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+        }
+        
+        .why-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23800020' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
+            border-radius: 3px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            counter-reset: feature-counter;
+        }
+        
+        .feature-item {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 30px 30px 30px 80px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-item::before {
+            counter-increment: feature-counter;
+            content: counter(feature-counter);
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .feature-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .stats-highlight {
+            margin-top: 50px;
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #6a001a 100%);
+            border-radius: 15px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .stats-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .why-section {
+                padding: 50px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .why-section {
+                padding: 40px 25px;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .feature-item {
+                padding: 25px 25px 25px 70px;
+            }
+            
+            .stats-text {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .why-section {
+                padding: 30px 20px;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            .section-title {
+                font-size: 1.9rem;
+            }
+            
+            .section-tag {
+                font-size: 0.9rem;
+                letter-spacing: 3px;
+            }
+            
+            .feature-item {
+                padding: 20px 20px 20px 60px;
+            }
+            
+            .feature-item::before {
+                left: 15px;
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+            
+            .feature-text {
+                font-size: 1rem;
+            }
+            
+            .stats-text {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="connect-subscribe">
+  <div class="connect">
+    <h2 class="connect-heading">LET'S CONNECT.</h2>
+    <p class="connect-text">Check out our socials and feel free to connect!</p>
+    <div class="social-icons">
+      <a href="https://wa.me/7509925761" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/rupnitphotographyproduction.in/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/rupesh.dharpure.14" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="http://www.youtube.com/@rupnitphotographyproductio5284" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="subscribe">
+    <h2 class="connect-heading">GET THE LATEST.</h2>
+    <p class="connect-text">Subscribe to our mailing list to get the latest news of rupnitphotographyproduction.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Your e-mail address" required>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+    <p class="disclaimer">
+      By clicking SUBSCRIBE you are approving that we will keep you updated by email. <br>
+      <a href="#">Privacy policy.</a>
+    </p>
+  </div>
+</section>
+
+<style>
+.connect-subscribe {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 60px 40px 40px 40px; /* ✅ Added bottom padding for balance */
+    margin: 0;
+    align-items: flex-start;
+}
+
+.connect, .subscribe {
+    
+    margin: 0;
+    padding: 0;
+}
+
+.connect-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.connect-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 0; /* ✅ no extra gap */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon.whatsapp { background-color: #25D366; }
+.social-icon.instagram { background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 50%, #d6249f 75%, #285AEB 100%); }
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.youtube { background-color: #FF0000; }
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 240px;
+}
+
+.subscribe-form button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #800020;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.disclaimer a {
+    color: #800020;
+    text-decoration: underline;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+    .connect-subscribe {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px 20px 20px;
+        gap: 20px; /* ✅ Reduced gap */
+    }
+
+    .connect-heading {
+        font-size: 1.6rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 10px; /* ✅ Small spacing only */
+    }
+
+    .subscribe {
+        margin-top: 0; /* ✅ No extra gap above "GET THE LATEST" */
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .subscribe-form input[type="email"],
+    .subscribe-form button {
+        width: 100%;
+    }
+}
+</style>
+
+
+
+
+
+<footer class="bg-black text-gray-300 py-10 px-6 sm:px-10 md:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+
+    <!-- OUR BRAND -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">OUR BRAND</h3>
+      <img src="img/png_logo-removebg-preview.png" alt="Rupnit Logo" class="mb-4 w-32 h-auto">
+      <p class="text-teal-400 font-semibold">RUPNIT PHOTOGRAPHY PRODUCTION</p>
+      <p class="mt-2">Pandhurna - 480334</p>
+      <p>Madhya Pradesh</p>
+    </div>
+
+    <!-- OFFICE -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">OFFICE</h3>
+      <p>SHOP NO - 30, Pardi Road, Opposite Bank of India,<br>Pandhurna, Madhya Pradesh - 480334</p>
+      <p class="mt-2">Business Hours: 10:00 am - 10:00 pm</p>
+
+      <!-- Google Map -->
+      <div class="mt-4 rounded overflow-hidden shadow-lg w-full">
+        <div class="aspect-w-16 aspect-h-9 relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945970.0587621127!2d76.536527!3d22.1566275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd5af40267d74e5%3A0x26c322c599d5e0d7!2sRUPNIT%20PHOTOGRAPH%20PRODUCTION%20PANDHURNA!5e0!3m2!1sen!2sin!4v1756126994952!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="absolute top-0 left-0 w-full h-full">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div class="flex flex-col">
+      <h3 class="text-lg font-bold text-white mb-4">CONTACT US</h3>
+      <p class="mb-4">Stay connected with us</p>
+
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-envelope text-teal-400"></i>
+        <a href="mailto:rupnitpandhurna2025@gmail.com" class="text-teal-400 hover:underline">
+          rupnitpandhurna2025@gmail.com
+        </a>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-envelope text-teal-400"></i>
+        <span class="text-teal-400">RUPNITPANDHURNA@2025</span>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fas fa-phone-alt text-teal-400"></i>
+        <a href="tel:+917509925761" class="text-teal-400 hover:underline">+91-7509925761</a>
+      </p>
+      <p class="mt-2 flex items-center space-x-2">
+        <i class="fab fa-whatsapp text-teal-400"></i>
+        <a href="https://wa.me/917509925761" target="_blank" class="text-teal-400 hover:underline">WhatsApp: 7509925761</a>
+      </p>
+    </div>
+  </div>
+
+  <hr class="border-gray-700 my-6">
+
+  <!-- Bottom -->
+  <div class="text-center text-sm text-gray-500">
+    © 2010-2025 <span class="text-white">RUPNIT PHOTOGRAPHY PRODUCTION</span> | Pandhurna, Madhya Pradesh | All Rights Reserved
+  </div>
+</footer>
+
+<!-- FontAwesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+<!-- Aspect Ratio (for Tailwind v2 or v3 without plugin) -->
+<style>
+  .aspect-w-16 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+  }
+  .aspect-w-16 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+ 
+
+
+
+
+
+
+
+
+
