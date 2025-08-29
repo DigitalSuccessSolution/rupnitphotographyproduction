@@ -500,6 +500,178 @@
 
 <!-- about section end -->
 
+<section class="owner-section">
+    <!-- Image Section -->
+    <div class="owner-image">
+        <div class="image-shadow"></div>
+        <img src="img/ROOPESH PHOTO (3).jpg" 
+             alt="Owner - Rupnit Photography Production">
+    </div>
+
+    <!-- Content Section -->
+    <div class="owner-content">
+        <span class="section-tag">Owner</span>
+        <h2>ROOPESH DHARPURE</h2>
+        <p>
+            Meet the creative mind behind Rupnit Photography Production — blending passion with precision to capture moments that matter. With a deep understanding of light, mood, and storytelling, our founder has turned a vision into a trusted name in the world of photography and cinematic production. From portraits to large-scale events, every frame is crafted with purpose and soul.
+        </p>
+    </div>
+</section>
+
+<style>
+    :root {
+        --primary-dark: #800020;
+        --primary-gold: #d4af37;
+        --text-dark: #333333;
+        --text-light: #5a5a5a;
+    }
+
+    .owner-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        padding: 60px;
+        border-radius: 20px;
+        max-width: 1200px;
+        margin: 60px auto;
+        gap: 60px;
+        flex-wrap: wrap;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Top & Bottom Gradient Borders */
+    .owner-section::before,
+    .owner-section::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, var(--primary-dark), var(--primary-gold));
+    }
+
+    .owner-section::before {
+        top: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .owner-section::after {
+        bottom: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .owner-image {
+        flex: 1 1 350px;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .image-shadow {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(rgba(128, 0, 32, 0.25), transparent 70%);
+        z-index: 0;
+        filter: blur(15px);
+        transform: translateY(10px);
+    }
+
+    .owner-image img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .owner-content {
+        flex: 1 1 400px;
+        max-width: 500px;
+        color: var(--text-dark);
+    }
+
+    .section-tag {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--primary-gold);
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .owner-content h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        background: linear-gradient(90deg, #800020, #d4af37);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+
+    .owner-content h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: #d4af37;
+        border-radius: 2px;
+    }
+
+    .owner-content p {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .owner-section {
+            flex-direction: column;
+            text-align: center;
+            padding: 40px 30px;
+            gap: 40px;
+        }
+
+        .owner-content h2 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .image-shadow,
+        .owner-image img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .owner-content h2 {
+            font-size: 1.8rem;
+        }
+
+        .owner-content p {
+            font-size: 1rem;
+        }
+    }
+</style>
+
 
 
 
