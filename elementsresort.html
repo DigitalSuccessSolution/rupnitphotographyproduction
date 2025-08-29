@@ -45,7 +45,6 @@
             <li><a href="highquality.html" class="block px-4 py-2 hover:bg-pink-100">High Quality Photography</a></li>
             <li><a href="graphices.html" class="block px-4 py-2 hover:bg-pink-100">Graphics Design</a></li>
             <li><a href="videoediting.html" class="block px-4 py-2 hover:bg-pink-100">Video Editing</a></li>
-            <li><a href="customized.html" class="block px-4 py-2 hover:bg-pink-100">Customized Gifts</a></li>
             <li><a href="invitationcards.html" class="block px-4 py-2 hover:bg-pink-100">Invitation Cards</a></li>
           </ul>
         </li>
@@ -83,7 +82,7 @@
           <a href="highquality.html" class="block hover:text-pink-400">High Quality Photography</a>
           <a href="graphices.html" class="block hover:text-pink-400">Graphics Design</a>
           <a href="videoediting.html" class="block hover:text-pink-400">Video Editing</a>
-          <a href="customized.html" class="block hover:text-pink-400">Customized Gifts</a>
+         
           <a href="invitationcards.html" class="block hover:text-pink-400">Invitation Cards</a>
         </div>
       </div>
@@ -93,20 +92,18 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="h-[70vh] w-full relative">
-  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-       alt="About Hero Image"
-       class="h-[70vh] w-full object-cover">
-  <div class="absolute inset-0 bg-black/40"></div>
+<section class="h-[70vh] w-full relative">
+    <img src="https://images.unsplash.com/photo-1628870776167-b4b684441e10?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEVsZW1lbnRzJTIwUmVzb3J0fGVufDB8fDB8fHww"
+        alt="Elements Resort Image"
+        class="h-[70vh] w-full object-cover">
+    <div class="absolute inset-0 bg-black/40"></div>
 
-  <!-- Content Center -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-    <h1 class="text-white text-5xl font-bold mb-4">About Us</h1>
-    <p class="text-white text-lg max-w-2xl">
-      Capturing moments that last a lifetime — learn more about our story and passion for photography.
-    </p>
-  </div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-white text-5xl font-bold mb-4">Elements Resort</h1>
+        <p class="text-white text-lg max-w-2xl">
+            Escape to a world of tranquility and luxury. Discover the perfect blend of nature and modern comfort at Elements Resort.
+        </p>
+    </div>
 </section>
 
 
@@ -151,13 +148,1190 @@
 
 
 
+    <style>
+        :root {
+            --primary-dark: #800020;
+            --primary-gold: #d4af37;
+            --primary-light: #f9f4f5;
+            --text-dark: #333333;
+            --text-light: #5a5a5a;
+            --accent-light: #f8f0e9;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfcfc;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .packages-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Section Header Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
+            border-radius: 3px;
+        }
+        
+        /* Pricing Table Styles */
+        .pricing-table-container {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 40px;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pricing-table th {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #6a001a 100%);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .pricing-table th:first-child {
+            background: transparent;
+            color: var(--text-dark);
+            text-align: left;
+            padding-left: 30px;
+        }
+        
+        .package-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .package-tag {
+            display: inline-block;
+            background: var(--primary-gold);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-table td {
+            padding: 18px 15px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-table td:first-child {
+            text-align: left;
+            padding-left: 30px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .pricing-table tr:hover td {
+            background: rgba(248, 240, 233, 0.3);
+        }
+        
+        .price-cell {
+            background: rgba(248, 240, 233, 0.2);
+        }
+        
+        .actual-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9rem;
+            display: block;
+        }
+        
+        .offer-price {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .feature-icon {
+            color: #388e3c;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .feature-missing {
+            color: #e53935;
+            font-weight: bold;
+        }
+        
+        .pricing-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-table tbody tr:nth-child(even) {
+            background: rgba(249, 244, 245, 0.3);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-dark);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            border: 2px solid var(--primary-dark);
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--primary-dark);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .pricing-table-container {
+                overflow-x: auto;
+            }
+            
+            .pricing-table {
+                min-width: 800px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .packages-section {
+                padding: 70px 0;
+            }
+            
+            .pricing-table th,
+            .pricing-table td {
+                padding: 15px 10px;
+            }
+            
+            .pricing-table td:first-child {
+                padding-left: 20px;
+            }
+            
+            .package-name {
+                font-size: 1.3rem;
+            }
+            
+            .offer-price {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            .section-title {
+                font-size: 1.9rem;
+            }
+            
+            .section-tag {
+                font-size: 0.9rem;
+                letter-spacing: 3px;
+            }
+            
+            .pricing-table th,
+            .pricing-table td {
+                padding: 12px 8px;
+                font-size: 0.9rem;
+            }
+            
+            .pricing-table td:first-child {
+                padding-left: 15px;
+                font-size: 0.85rem;
+            }
+            
+            .package-name {
+                font-size: 1.1rem;
+            }
+            
+            .actual-price {
+                font-size: 0.8rem;
+            }
+            
+            .offer-price {
+                font-size: 1.1rem;
+            }
+            
+            .feature-icon,
+            .feature-missing {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <!-- Packages Section -->
+    <section class="packages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Special Offer</span>
+                <h2 class="section-title">Pre-Wedding Shoot Packages</h2>
+                <p>Limited Period Offer - Capture your special moments with our exclusive packages</p>
+            </div>
+            
+            <div class="pricing-table-container">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Packages</th>
+                            <th>
+                                <div class="package-name">Budget</div>
+                                <span class="package-tag">Value</span>
+                            </th>
+                            <th>
+                                <div class="package-name">Basic</div>
+                                <span class="package-tag">Popular</span>
+                            </th>
+                            <th>
+                                <div class="package-name">Premium</div>
+                                <span class="package-tag">Recommended</span>
+                            </th>
+                            <th>
+                                <div class="package-name">Luxury</div>
+                                <span class="package-tag">Elite</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Price</td>
+                            <td class="price-cell">
+                                <span class="actual-price">₹ 22,000</span>
+                                <span class="offer-price">₹ 17,000</span>
+                                <a href="#" class="cta-button">Book Now</a>
+                            </td>
+                            <td class="price-cell">
+                                <span class="actual-price">₹ 32,000</span>
+                                <span class="offer-price">₹ 27,000</span>
+                                <a href="#" class="cta-button">Book Now</a>
+                            </td>
+                            <td class="price-cell">
+                                <span class="actual-price">₹ 42,000</span>
+                                <span class="offer-price">₹ 37,000</span>
+                                <a href="#" class="cta-button">Book Now</a>
+                            </td>
+                            <td class="price-cell">
+                                <span class="actual-price">₹ 53,000</span>
+                                <span class="offer-price">₹ 51,000</span>
+                                <a href="#" class="cta-button">Book Now</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Shoot Time</td>
+                            <td>4.5 hours</td>
+                            <td>4.5 hours</td>
+                            <td>4.5 hours</td>
+                            <td>7.5 hours</td>
+                        </tr>
+
+                        <tr>
+                            <td>Photographer</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Cinematic Video</td>
+                            <td><span class="feature-missing">✖</span></td>
+                            <td>1 min</td>
+                            <td>3 mins</td>
+                            <td>3-4 mins</td>
+                        </tr>
+
+                        <tr>
+                            <td>Day Photos</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Night Photos</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Fairy Lights</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Elements Resort Charges</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Drone Photos</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Unlimited Edited Photos</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Private Room</td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Invite Video</td>
+                            <td><span class="feature-missing">✖</span></td>
+                            <td><span class="feature-missing">✖</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                            <td><span class="feature-icon">✔</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Costumes Bundle</td>
+                            <td><span class="feature-missing">✖</span></td>
+                            <td>2 Dresses</td>
+                            <td>6 Dresses</td>
+                            <td>10 Dresses</td>
+                        </tr>
+
+                        <tr>
+                            <td>Makeup & Hairstyle</td>
+                            <td><span class="feature-missing">✖</span></td>
+                            <td>One-time</td>
+                            <td>One-time</td>
+                            <td>All Dresses</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add interactive effects to table rows
+        document.addEventListener('DOMContentLoaded', function() {
+            const tableRows = document.querySelectorAll('.pricing-table tbody tr');
+            
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = 'rgba(248, 240, 233, 0.5)';
+                });
+                
+                row.addEventListener('mouseleave', function() {
+                    if (this.rowIndex % 2 === 0) {
+                        this.style.backgroundColor = 'rgba(249, 244, 245, 0.3)';
+                    } else {
+                        this.style.backgroundColor = 'transparent';
+                    }
+                });
+            });
+        });
+    </script>
 
 
 
 
 
 
+<!-- gallery start  -->
 
+<!-- Photo Gallery Section -->
+<section class="py-16 px-6 bg-white">
+  <h2 class="text-3xl font-semibold text-center text-[#800020] mb-12">Photo Gallery</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <!-- Image 1 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/VRtqFpw.jpg" alt="Gallery Image 1" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 2 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/2GmtZNm.jpg" alt="Gallery Image 2" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 3 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/ToEAl1K.jpg" alt="Gallery Image 3" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 4 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/Etkdzh7.jpg" alt="Gallery Image 4" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 5 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/0HO7V5g.jpg" alt="Gallery Image 5" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 6 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/j1Ucrse.jpg" alt="Gallery Image 6" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 7 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/qSWeBYD.jpg" alt="Gallery Image 7" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 8 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/tHTKo6C.jpg" alt="Gallery Image 8" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+
+    <!-- Image 9 -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="https://i.imgur.com/EWXjFGr.jpg" alt="Gallery Image 9" class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
+    </div>
+  </div>
+</section>
+
+
+<!-- galllery end -->
+
+
+<section class="cinematic-gallery-section">
+    <div class="cinematic-container">
+        <div class="section-header">
+            <span class="section-tag">Our Productions</span>
+            <h2 class="section-title">Cinematic Video Gallery</h2>
+            <p class="section-subtitle">Experience the magic of your special moments through our lens</p>
+        </div>
+
+        <div class="featured-video-container">
+            <div class="video-wrapper">
+                <iframe width="100%" height="100%" 
+                    src="https://www.youtube.com/embed/2Vv-BfVoq4g" 
+                    title="Featured Wedding Video" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-caption">
+                <h3>Elegant Destination Wedding</h3>
+                <p>Riya & Amit's beautiful beachside celebration captured in cinematic 4K</p>
+            </div>
+        </div>
+
+        <div class="video-thumbnails-grid">
+            <div class="thumbnail-item">
+                <div class="thumbnail-wrapper">
+                    <iframe width="100%" height="100%" 
+                        src="https://www.youtube.com/embed/pRpeEdMmmQ0" 
+                        title="Wedding Video 1" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="thumbnail-caption">
+                    <h4>Traditional Ceremony</h4>
+                    <p>Cultural rituals captured with artistic vision</p>
+                </div>
+            </div>
+
+            <div class="thumbnail-item">
+                <div class="thumbnail-wrapper">
+                    <iframe width="100%" height="100%" 
+                        src="https://www.youtube.com/embed/JGwWNGJdvx8" 
+                        title="Wedding Video 2" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="thumbnail-caption">
+                    <h4>Reception Highlights</h4>
+                    <p>Elegant celebrations and heartfelt speeches</p>
+                </div>
+            </div>
+
+            <div class="thumbnail-item">
+                <div class="thumbnail-wrapper">
+                    <iframe width="100%" height="100%" 
+                        src="https://www.youtube.com/embed/kJQP7kiw5Fk" 
+                        title="Wedding Video 3" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="thumbnail-caption">
+                    <h4>Pre-Wedding Romance</h4>
+                    <p>Intimate moments before the big day</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-more-container">
+            <a href="#" class="view-more-btn">
+                View Full Portfolio
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* New styles for a light theme */
+    .cinematic-gallery-section {
+        padding: 100px 20px;
+        background: #ffffff; /* White background */
+        color: #333333; /* Dark text for contrast */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cinematic-gallery-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 20% 30%, rgba(128, 0, 32, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .cinematic-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-tag {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #800020; /* Darker primary color */
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .section-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #333333;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+        border-radius: 3px;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        color: #555555;
+        max-width: 600px;
+        margin: 25px auto 0;
+        line-height: 1.6;
+    }
+
+    .featured-video-container {
+        margin-bottom: 50px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .featured-video-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        background: #eeeeee;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .video-caption {
+        padding: 25px;
+        background: #f5f5f5; /* Light grey background */
+        border-top: 2px solid #d4af37; /* Gold accent */
+        color: #333333;
+    }
+
+    .video-caption h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333333;
+    }
+
+    .video-caption p {
+        color: #666666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .video-thumbnails-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    .thumbnail-item {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #f0f0f0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .thumbnail-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .thumbnail-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 75%; /* 4:3 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        background: #eeeeee;
+        cursor: pointer;
+    }
+
+    .thumbnail-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        transition: transform 0.3s ease;
+    }
+
+    .thumbnail-item:hover .thumbnail-wrapper iframe {
+        transform: scale(1.05);
+    }
+
+    .play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .thumbnail-wrapper:hover .play-overlay {
+        opacity: 1;
+    }
+
+    .play-overlay i {
+        font-size: 3rem;
+        color: white;
+        background: rgba(128, 0, 32, 0.8);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .thumbnail-wrapper:hover .play-overlay i {
+        transform: scale(1.1);
+        background: #800020;
+    }
+
+    .thumbnail-caption {
+        padding: 20px;
+        background: #f5f5f5;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .thumbnail-caption h4 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #333333;
+    }
+
+    .thumbnail-caption p {
+        color: #666666;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .view-more-container {
+        text-align: center;
+    }
+
+    .view-more-btn {
+        display: inline-flex;
+        align-items: center;
+        background: #800020;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .view-more-btn:hover {
+        background: #6a001a;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .view-more-btn i {
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .view-more-btn:hover i {
+        transform: translateX(5px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .video-thumbnails-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cinematic-gallery-section {
+            padding: 70px 15px;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+        }
+        
+        .video-thumbnails-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-caption {
+            padding: 20px;
+        }
+        
+        .video-caption h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .section-header {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.9rem;
+        }
+        
+        .section-tag {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+        }
+        
+        .section-subtitle {
+            font-size: 1rem;
+        }
+        
+        .featured-video-container {
+            margin-bottom: 30px;
+        }
+        
+        .thumbnail-caption {
+            padding: 15px;
+        }
+        
+        .thumbnail-caption h4 {
+            font-size: 1.2rem;
+        }
+        
+        .view-more-btn {
+            padding: 12px 25px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const thumbnails = document.querySelectorAll('.thumbnail-wrapper');
+        const featuredIframe = document.querySelector('.featured-video-container iframe');
+        const captionTitle = document.querySelector('.video-caption h3');
+        const captionDesc = document.querySelector('.video-caption p');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const src = this.querySelector('iframe').src;
+                
+                // Swap the videos
+                featuredIframe.src = src;
+                
+                // Update caption
+                const newTitle = this.nextElementSibling.querySelector('h4').textContent;
+                const newDesc = this.nextElementSibling.querySelector('p').textContent;
+                
+                captionTitle.textContent = newTitle;
+                captionDesc.textContent = newDesc;
+                
+                // Scroll to top of featured video
+                document.querySelector('.featured-video-container').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>
+
+
+
+<!-- ✅ FAQ Section Start -->
+<style>
+/* --------------------
+   FAQ Section
+-------------------- */
+.faq-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(128, 0, 32, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+}
+
+.faq-heading {
+    color: #800020;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.faq-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #800020 0%, #d4af37 100%);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+/* Accordion */
+.faq-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(128, 0, 32, 0.08);
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-left: 4px solid #800020;
+    transition: all 0.3s ease;
+}
+
+.faq-item.open {
+    border-left-color: #d4af37;
+    box-shadow: 0 12px 25px rgba(128, 0, 32, 0.15);
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px;
+    cursor: pointer;
+    color: #800020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background: rgba(128,0,32,0.05);
+}
+
+.faq-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+    color: #800020;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+    color: #d4af37;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 600px;
+    padding: 0 20px 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-heading {
+        font-size: 2rem;
+    }
+
+    .faq-section {
+        padding: 40px 20px;
+    }
+}
+</style>
+
+<section class="faq-section">
+  <h2 class="faq-heading">Elements Resort – FAQ</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Why is Elements Resort ideal for pre-wedding shoots?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Elements Resort is a stunning outdoor location known for its beautifully landscaped gardens, rustic architecture, and serene backdrops—perfect for dreamy, cinematic pre-wedding photography.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do I need to book the resort in advance?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Yes, pre-booking is highly recommended. Elements Resort is a popular choice, and advance booking ensures your preferred date and time slot is secured.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What time is best for a shoot at Elements Resort?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Early morning (7 AM – 10 AM) and golden hour (4 PM – 6 PM) are the best times to shoot at Elements Resort due to soft natural lighting and pleasant ambiance.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Are props or themes allowed at the resort?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Yes, the resort allows creative themes and props for pre-wedding shoots. Make sure to inform in advance if large setups or custom decor is involved.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What is the cost of a shoot at Elements Resort?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      The typical shoot package at Elements Resort starts from <strong>₹18,000</strong>, which includes location rental, changing rooms, and access to curated outdoor spaces.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do you provide costumes and makeup at the location?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Yes! We offer 300+ designer outfits and makeup services on request. You can browse our costume collection at <a href="https://rupnitphotographyproduction.in/rentrobe/" target="_blank">RentRobe</a>.
+    </div>
+  </div>
+</section>
+
+<script>
+// Accordion Toggle
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const faqItem = button.parentElement;
+    faqItem.classList.toggle("open");
+
+    // icon change
+    const icon = button.querySelector(".faq-icon");
+    icon.textContent = faqItem.classList.contains("open") ? "−" : "+";
+  });
+});
+</script>
 
 
 
