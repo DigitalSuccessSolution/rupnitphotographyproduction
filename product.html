@@ -969,159 +969,532 @@ container.addEventListener('dragstart', (e) => e.preventDefault());
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Product Filtering Responsive</title>
   <link rel="stylesheet" href="style.css">
-<style>
-  /* Basic Reset */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background: #f9f9f9;
-    color: #800020;
-  }
 
-  /* Circle Filters */
-  .circle-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
-  .circle-filter {
-    background: #ddd;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 12px;
-    text-align: center;
-    padding: 10px;
-    transition: background-color 0.3s;
-    user-select: none;
-  }
-  .circle-filter:hover {
-    background: #aaa;
-  }
-  .circle-filter.active {
-    background: #d4af37;
-    color: white;
-    font-weight: 700;
-  }
 
-  /* Filter Buttons */
-  .filter-buttons {
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  .filter-buttons button {
-    background: #eee;
-    border: none;
-    padding: 10px 18px;
-    margin: 5px 8px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    user-select: none;
-  }
-  .filter-buttons button:hover {
-    background: #ccc;
-  }
-  .filter-buttons button.active {
-    background: #d4af37;
-    color: white;
-    font-weight: 700;
-  }
+   <style>
+        :root {
+            --primary: #d4af37;
+            --primary-dark: #b8941f;
+            --secondary: #800020;
+            --dark: #2c2c2c;
+            --light: #ffffff;
+            --gray: #f8f9fa;
+            --gray-dark: #e9ecef;
+            --text: #2d2d2d;
+            --text-light: #6c757d;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
 
-  /* Products Grid */
-  .product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  .product-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgb(0 0 0 / 0.2);
-  }
-  .product-card img {
-    max-width: 100%;
-    height: 150px;
-    object-fit: contain;
-    margin-bottom: 12px;
-  }
-  .product-card h4 {
-    font-size: 16px;
-    margin: 8px 0;
-    height: 40px;
-    overflow: hidden;
-  }
-  .price {
-    font-weight: bold;
-    color: #d4af37;
-    margin-bottom: 6px;
-  }
-  .rating {
-    font-size: 14px;
-    color: #555;
-  }
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  /* Responsive for small screens */
-  @media (max-width: 600px) {
+        body {
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            background: var(--gray);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            color: var(--light);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* Circle Filters */
+        .circle-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        .circle-filter {
+            background: var(--light);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: center;
+            padding: 10px;
+            transition: var(--transition);
+            user-select: none;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circle-filter:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .circle-filter img {
+            width: 50%;
+            height: auto;
+            object-fit: contain;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .circle-filter:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .circle-filter:hover:before {
+            opacity: 0.1;
+        }
+
+        .circle-filter:hover img {
+            transform: scale(1.1);
+        }
+
+        .circle-filter.active {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+        }
+
+        .circle-filter.active:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid var(--primary);
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .filter-buttons button {
+            background: var(--light);
+            border: none;
+            padding: 12px 22px;
+            margin: 6px 8px;
+            font-size: 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            user-select: none;
+            box-shadow: var(--shadow);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-buttons button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .filter-buttons button.active {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Products Grid */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--light);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card:hover:before {
+            transform: scaleX(1);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 170px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card h4 {
+            font-size: 16px;
+            margin: 10px 0;
+            height: 40px;
+            overflow: hidden;
+            font-weight: 600;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .product-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+
+        .rating {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .order-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .order-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .circle-filters {
+                gap: 15px;
+            }
+            
+            .circle-filter {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .filter-buttons button {
+                padding: 10px 18px;
+                margin: 5px;
+                font-size: 13px;
+            }
+            
+            .product-list {
+                display: block;
+            }
+            
+            .product-card {
+                margin-bottom: 25px;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .product-card img {
+                height: 160px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Section title */
+        .section-title {
+            text-align: center;
+            margin: 30px 0;
+            color: var(--dark);
+            position: relative;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 12px auto;
+            border-radius: 2px;
+        }
+
+        /* MOBILE RESPONSIVE OVERRIDES */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
     .circle-filters {
-      gap: 12px;
+        gap: 12px;
+        padding: 0 10px;
+        justify-content: center;
     }
+
     .circle-filter {
-      width: 60px;
-      height: 60px;
-      font-size: 11px;
-      padding: 8px;
+        width: 64px;
+        height: 64px;
+        padding: 8px;
     }
+
+    .circle-filter img {
+        width: 60%;
+    }
+
+    .filter-buttons {
+        padding: 0 10px;
+    }
+
     .filter-buttons button {
-      padding: 8px 14px;
-      font-size: 13px;
-      margin: 5px 6px;
+        padding: 10px 16px;
+        margin: 5px;
+        font-size: 13px;
+        border-radius: 25px;
     }
+
     .product-list {
-      display: block; /* Stack vertically */
+        display: grid;
+        grid-template-columns: 1fr; /* Stack one product per row */
+        gap: 20px;
+        padding: 0 12px;
     }
+
     .product-card {
-      margin-bottom: 20px;
-      width: 100%;
-      max-width: 100%;
+        padding: 16px;
+        border-radius: 10px;
     }
+
     .product-card img {
-      height: 180px;
+        height: 140px;
     }
-  }
-</style>
+
+    .product-card h4 {
+        font-size: 15px;
+        height: auto;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .product-card p {
+        font-size: 0.85rem;
+    }
+
+    .order-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title:after {
+        width: 40px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle-filter {
+        width: 60px;
+        height: 60px;
+    }
+
+    .circle-filter img {
+        width: 55%;
+    }
+
+    .filter-buttons button {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .product-card img {
+        height: 130px;
+    }
+
+    .order-btn {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+}
+
+    </style>
+
+
+
 </head>
 <body>
 
 <!-- Circle Filters -->
 <div class="circle-filters">
-  <div class="circle-filter" data-filter="30min">Same Day (5)</div>
-  <div class="circle-filter" data-filter="anniversary">Anniversary (3)</div>
-  <div class="circle-filter" data-filter="birthday">Birthday (7)</div>
-  <div class="circle-filter" data-filter="caricature">Caricature (3)</div>
-  <div class="circle-filter" data-filter="photo">Photo (2)</div>
-  <div class="circle-filter" data-filter="name">Name (1)</div>
-  <div class="circle-filter" data-filter="jewellery">Jewellery (2)</div>
-  <div class="circle-filter" data-filter="bestseller">Best Seller (8)</div>
+  <div class="circle-filter" data-filter="30min">
+    <img src="images/30min.png" alt="Same Day" />
+  </div>
+  <div class="circle-filter" data-filter="anniversary">
+    <img src="images/anniversary.png" alt="Anniversary" />
+  </div>
+  <div class="circle-filter" data-filter="birthday">
+    <img src="images/birthday.png" alt="Birthday" />
+  </div>
+  <div class="circle-filter" data-filter="caricature">
+    <img src="images/caricature.png" alt="Caricature" />
+  </div>
+  <div class="circle-filter" data-filter="photo">
+    <img src="images/photo.png" alt="Photo" />
+  </div>
+  <div class="circle-filter" data-filter="name">
+    <img src="images/name.png" alt="Name" />
+  </div>
+  <div class="circle-filter" data-filter="jewellery">
+    <img src="images/jewellery.png" alt="Jewellery" />
+  </div>
+  <div class="circle-filter" data-filter="bestseller">
+    <img src="images/bestseller.png" alt="Best Seller" />
+  </div>
 </div>
+<style>
+  
+</style>
 
 <!-- Filter Buttons -->
 <div class="filter-buttons">
@@ -1138,111 +1511,439 @@ container.addEventListener('dragstart', (e) => e.preventDefault());
 <!-- Products -->
 <div class="product-list">
   <!-- Sample Products for Frames (total 9) -->
+   <style>
+    
+   </style>
+    <!-- 1 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame1.png" alt="Frame 1" />
-    <h4>Classic Wooden Frame</h4>
-    <p class="price">₹250</p>
-    <div class="rating">⭐ 4.5 (30)</div>
+    <img src="images/PCF-04.png" alt="PCF-04" />
+    <h4>PCF-04 – Personalized Frame (9 Photos)</h4>
+    <p class="price">Starting at ₹470.00</p>
+    <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-04%20Personalized%20Frame" target="_blank">Order Now</a>
   </div>
+<!-- 2 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame2.png" alt="Frame 2" />
-    <h4>Modern Frame</h4>
-    <p class="price">₹300</p>
-    <div class="rating">⭐ 4.7 (28)</div>
+    <img src="images/PCF-13.png" alt="PCF-13" />
+    <h4>PCF-13 – Frame with 6 Photos & Names</h4>
+    <p class="price">Starting at ₹520.00</p>
+    <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-13" target="_blank">Order Now</a>
   </div>
+
+<!-- 3 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame3.png" alt="Frame 3" />
-    <h4>Designer Frame</h4>
-    <p class="price">₹400</p>
-    <div class="rating">⭐ 4.6 (25)</div>
+    <img src="images/PCF-02.png" alt="PCF-02" />
+    <h4>PCF-02 – Frame with 9 Photos</h4>
+    <p class="price">Starting at ₹490.00</p>
+    <p>12x12 - ₹490<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-02" target="_blank">Order Now</a>
   </div>
+
+  <!-- 4 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame4.png" alt="Frame 4" />
-    <h4>Classic Golden Frame</h4>
-    <p class="price">₹450</p>
-    <div class="rating">⭐ 4.8 (20)</div>
+    <img src="images/PCF-08.png" alt="PCF-08" />
+    <h4>PCF-08 – Frame with 9 Photos</h4>
+    <p class="price">Starting at ₹470.00</p>
+    <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-08" target="_blank">Order Now</a>
   </div>
+
+<!-- 5 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame5.png" alt="Frame 5" />
-    <h4>Wooden Photo Frame</h4>
-    <p class="price">₹350</p>
-    <div class="rating">⭐ 4.4 (18)</div>
+    <img src="images/PCF-03.png" alt="PCF-03" />
+    <h4>PCF-03 – Frame with 9 Photos</h4>
+    <p class="price">Starting at ₹470.00</p>
+    <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-03" target="_blank">Order Now</a>
   </div>
+
+
+   <!-- 6 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame6.png" alt="Frame 6" />
-    <h4>Rustic Frame</h4>
-    <p class="price">₹280</p>
-    <div class="rating">⭐ 4.3 (16)</div>
+    <img src="images/PCF-22.png" alt="PCF-22" />
+    <h4>PCF-22 – Circle Frame with 13 Photos</h4>
+    <p class="price">Starting at ₹520.00</p>
+    <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+    <p>High Quality 6mm Laminated Fixed Photo Frame</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-22" target="_blank">Order Now</a>
   </div>
+
+
+  <!-- 7 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame7.png" alt="Frame 7" />
-    <h4>Elegant Silver Frame</h4>
-    <p class="price">₹500</p>
-    <div class="rating">⭐ 4.9 (12)</div>
+    <img src="images/PCF-15.png" alt="PCF-15" />
+    <h4>PCF-15 – Frame with 4 Photos</h4>
+    <p class="price">Starting at ₹520.00</p>
+    <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-15" target="_blank">Order Now</a>
   </div>
+
+
+   <!-- 8 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame8.png" alt="Frame 8" />
-    <h4>Classic Black Frame</h4>
-    <p class="price">₹320</p>
-    <div class="rating">⭐ 4.5 (22)</div>
+    <img src="images/PCF-25.png" alt="PCF-25" />
+    <h4>PCF-25 – Circle Frame with 5 Photos</h4>
+    <p class="price">Starting at ₹520.00</p>
+    <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+    <p>High Quality 6mm Laminated Fixed Photo Frame</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-25" target="_blank">Order Now</a>
   </div>
+
+
+  <!-- 9 -->
   <div class="product-card" data-category="frames">
-    <img src="images/frame9.png" alt="Frame 9" />
-    <h4>Minimalist Frame</h4>
-    <p class="price">₹270</p>
-    <div class="rating">⭐ 4.2 (15)</div>
+    <img src="images/PCF-14.png" alt="PCF-14" />
+    <h4>PCF-14 – Frame with 8 Photos</h4>
+    <p class="price">Starting at ₹520.00</p>
+    <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-14" target="_blank">Order Now</a>
   </div>
+
+  <!-- 10 -->
+  <div class="product-card" data-category="frames">
+    <img src="images/PCF-11.png" alt="PCF-11" />
+    <h4>PCF-11 – Frame with 3+3 Photos</h4>
+    <p class="price">Starting at ₹520.00</p>
+    <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+    <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+    <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-11" target="_blank">Order Now</a>
+  </div>
+<!-- 11 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-XX.png" alt="PCF-XX" />
+  <h4>Personalized Circle Frame with 5 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>High Quality 6mm Laminated Fixed Photo Frame<br>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20Personalized%20Circle%20Frame%20with%205%20Photos" target="_blank">Order Now</a>
+</div>
+
+<!-- 12 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-10.png" alt="PCF-10" />
+  <h4>PCF-10 – Frame with 3+3 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-10" target="_blank">Order Now</a>
+</div>
+
+<!-- 13 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-06.png" alt="PCF-06" />
+  <h4>PCF-06 – Frame with 9 Photos</h4>
+  <p class="price">Starting at ₹470.00</p>
+  <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-06" target="_blank">Order Now</a>
+</div>
+
+<!-- 14 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-18.png" alt="PCF-18" />
+  <h4>PCF-18 – Frame with 5 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-18" target="_blank">Order Now</a>
+</div>
+
+<!-- 15 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-20.png" alt="PCF-20" />
+  <h4>PCF-20 – Circle Frame with 5 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>High Quality 6mm Laminated Fixed Photo Frame<br>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-20" target="_blank">Order Now</a>
+</div>
+
+<!-- 16 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-09.png" alt="PCF-09" />
+  <h4>PCF-09 – Frame with 9 Photos</h4>
+  <p class="price">Starting at ₹470.00</p>
+  <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-09" target="_blank">Order Now</a>
+</div>
+
+<!-- 17 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-12.png" alt="PCF-12" />
+  <h4>PCF-12 – Frame with 3+3 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-12" target="_blank">Order Now</a>
+</div>
+
+<!-- 18 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-26.png" alt="PCF-26" />
+  <h4>PCF-26 – Frame with 6 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>High Quality 6mm Laminated Fixed Photo Frame<br>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-26" target="_blank">Order Now</a>
+</div>
+
+<!-- 19 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-01.png" alt="PCF-01" />
+  <h4>PCF-01 – Frame with 6 Photos & Name</h4>
+  <p class="price">Starting at ₹470.00</p>
+  <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-01" target="_blank">Order Now</a>
+</div>
+
+<!-- 20 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-16.png" alt="PCF-16" />
+  <h4>PCF-16 – Frame with 3+3 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-16" target="_blank">Order Now</a>
+</div>
+
+<!-- 21 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-05.png" alt="PCF-05" />
+  <h4>PCF-05 – Frame with 9 Photos</h4>
+  <p class="price">Starting at ₹470.00</p>
+  <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-05" target="_blank">Order Now</a>
+</div>
+
+<!-- 22 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-27.png" alt="PCF-27" />
+  <h4>PCF-27 – Heart-Shaped Frame (14 Photos)</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>High Quality 6mm Laminated Fixed Photo Frame<br>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-27" target="_blank">Order Now</a>
+</div>
+
+<!-- 23 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-23.png" alt="PCF-23" />
+  <h4>PCF-23 – Circle Frame with 9 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>High Quality 6mm Laminated Fixed Photo Frame<br>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-23" target="_blank">Order Now</a>
+</div>
+
+<!-- 24 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-07.png" alt="PCF-07" />
+  <h4>PCF-07 – Frame with 9 Photos</h4>
+  <p class="price">Starting at ₹470.00</p>
+  <p>12x12 - ₹470<br>16x16 - ₹600<br>20x20 - ₹740<br>24x24 - ₹940</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-07" target="_blank">Order Now</a>
+</div>
+<!-- 25 -->
+<div class="product-card" data-category="frames">
+  <img src="images/PCF-17.png" alt="PCF-17" />
+  <h4>PCF-17 – Frame with 9 Photos</h4>
+  <p class="price">Starting at ₹520.00</p>
+  <p>12x12 - ₹520<br>16x16 - ₹780<br>20x20 - ₹1120<br>24x24 - ₹1480</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PCF-17" target="_blank">Order Now</a>
+</div>
+
+
+
+
 
   <!-- Keychains (9 products) -->
   <div class="product-card" data-category="keychain">
-    <img src="images/keychain13.png" alt="Alphabet Keychain" />
-    <h4>Alphabet Keychain</h4>
-    <p class="price">₹210</p>
-    <div class="rating">⭐ 4.4 (40)</div>
-  </div>
-  <div class="product-card" data-category="keychain">
-    <img src="images/keychain14.png" alt="Custom Shape Keychain" />
-    <h4>Custom Shape Keychain</h4>
-    <p class="price">₹270</p>
-    <div class="rating">⭐ 4.7 (48)</div>
-  </div>
-  <div class="product-card" data-category="keychain">
-    <img src="images/keychain15.png" alt="Wood & Metal Mix Keychain" />
-    <h4>Wood & Metal Mix Keychain</h4>
-    <p class="price">₹280</p>
-    <div class="rating">⭐ 4.6 (50)</div>
-  </div>
-  <div class="product-card" data-category="keychain">
-    <img src="images/keychain16.png" alt="Engraved Photo Keychain" />
-    <h4>Engraved Photo Keychain</h4>
-    <p class="price">₹300</p>
-    <div class="rating">⭐ 4.8 (55)</div>
-  </div>
-  <div class="product-card" data-category="keychain">
-    <img src="images/keychain17.png" alt="Keychain with Tassels" />
-    <h4>Keychain with Tassels</h4>
-    <p class="price">₹210</p>
-    <div class="rating">⭐ 4.4 (43)</div>
-  </div>
-  <div class="product-card" data-category="keychain">
-    <img src="images/keychain18.png" alt="Simple Plastic Keychain" />
-    <h4>Simple Plastic Keychain</h4>
-    <p class="price">₹180</p>
-    <div class="rating">⭐ 4.1 (30)</div>
-  </div>
-  <div class="product-card" data-category="keychain">
-    <img src="images/keychain19.png" alt="Colorful Keychain Set" />
-    <h4>Colorful Keychain Set</h4>
-    <p class="price">₹350</p>
-    <div class="rating">⭐ 4.7 (70)</div>
-  </div>
-  <!-- Additional 2 keychains for total 9 -->
-  <div class="product-card" data-category="keychain">
-    <img src="images/keychain20.png" alt="Leather Keychain" />
-    <h4>Leather Keychain</h4>
-    <p class="price">₹250</p>
-    <div class="rating">⭐ 4.3 (28)</div>
-  </div>
+  <img src="images/keychain1.png" alt="KC - 08" />
+  <h4>KC - 08 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2 X W" 2)</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA 7509925761</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-08" target="_blank">Order Now</a>
+</div>
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain2.png" alt="KC - 09" />
+  <h4>KC - 09 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2 X W" 2)</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA 7509925761</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-09" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain3.png" alt="AKC - 01" />
+  <h4>AKC - 01 – Acrylic Square Keychain</h4>
+  <p class="price">₹130.00</p>
+  <p>ACRYLIC SQUARE KEYCHAIN</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA 7509925761</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20AKC-01" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain4.png" alt="AE - 25" />
+  <h4>AE - 25 – Wooden Engraved Keychain</h4>
+  <p class="price">₹70.00</p>
+  <p>PERSONALIZED NAME ENGRAVED WOODEN KEYCHAIN</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20AE-25" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain5.png" alt="MKC - 03" />
+  <h4>MKC - 03 – Dual Side Metal Keychain</h4>
+  <p class="price">₹220.00</p>
+  <p>DUALSIDE METAL KEYCHAIN (H 1.5" X W 1")</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20MKC-03" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain6.png" alt="RKC - 02" />
+  <h4>RKC - 02 – Radiant Oval Keychain</h4>
+  <p class="price">₹140.00</p>
+  <p>POLY RADIUM DUALSIDE OVAL SHAPE KEYCHAIN</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20RKC-02" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain7.png" alt="AKC - 02" />
+  <h4>AKC - 02 – Acrylic Circle Keychain</h4>
+  <p class="price">₹130.00</p>
+  <p>ACYLIK CIRCLE KEYCHAIN</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20AKC-02" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain8.png" alt="KC - 07" />
+  <h4>KC - 07 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2 X W" 2)</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-07" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain9.png" alt="MKC - 02" />
+  <h4>MKC - 02 – Sublimation Metal Keychain</h4>
+  <p class="price">₹190.00</p>
+  <p>SUBLAMINATION METAL KEYCHAIN</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20MKC-02" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain10.png" alt="KC - 04" />
+  <h4>KC - 04 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2 X W" 2)</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-04" target="_blank">Order Now</a>
+</div>
+
+<!-- Continue with rest of the 10 items below -->
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain11.png" alt="KC - 02" />
+  <h4>KC - 02 – Personalized Photo Keychain</h4>
+  <p class="price">₹115.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2.5 X W" 1.6)</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-02" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain12.png" alt="KC - 06" />
+  <h4>KC - 06 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2 X W" 2)</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-06" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain13.png" alt="RKC - 01" />
+  <h4>RKC - 01 – Radiant Heart Keychain</h4>
+  <p class="price">₹140.00</p>
+  <p>POLY RADIUM DUALSIDE HEART 💜 KEYCHAIN</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20RKC-01" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain14.png" alt="KC - 05" />
+  <h4>KC - 05 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2 X W" 2)</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-05" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain15.png" alt="KC - 01" />
+  <h4>KC - 01 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>PERSONALIZED SUBLAMINATION PHOTO KEYCHAIN (H" 2 X W" 2)</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-01" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain16.png" alt="MKC - 01" />
+  <h4>MKC - 01 – Sublimation Metal Keychain</h4>
+  <p class="price">₹190.00</p>
+  <p>SUBLIMATION METAL KEYCHAIN (H 1.5" X W 1")</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20MKC-01" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain17.png" alt="AE - 30" />
+  <h4>AE - 30 – Name Engraved Acrylic Keychain</h4>
+  <p class="price">₹100.00</p>
+  <p>PERSONALIZED NAME ENGRAVED ACRYLIC KEYCHAIN</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20AE-30" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain18.png" alt="KC - 03" />
+  <h4>KC - 03 – Personalized Photo Keychain</h4>
+  <p class="price">₹105.00</p>
+  <p>SUBLAMINATION PHOTO KEYCHAIN (H 1.25" X W 1.25")</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20KC-03" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain19.png" alt="RKC - 03" />
+  <h4>RKC - 03 – Radiant Rectangular Keychain</h4>
+  <p class="price">₹140.00</p>
+  <p>POLY RADIUM DUALSIDE RECT KEYCHAIN (H 2.25" X 1.5")</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20RKC-03" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="keychain">
+  <img src="images/keychain20.png" alt="WKC - 01" />
+  <h4>WKC - 01 – Dual Side Wooden Heart Keychain</h4>
+  <p class="price">₹130.00</p>
+  <p>DUAL SIDE SUBLAMINATION HEART SHAPED WOODEN KEYCHAIN (H" 2 X W" 2)</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20WKC-01" target="_blank">Order Now</a>
+</div>
   <div class="product-card" data-category="keychain">
     <img src="images/keychain21.png" alt="Metallic Keychain" />
     <h4>Metallic Keychain</h4>
@@ -1250,51 +1951,111 @@ container.addEventListener('dragstart', (e) => e.preventDefault());
     <div class="rating">⭐ 4.5 (35)</div>
   </div>
 
+
+
+  
+
   <!-- Handal Mug (5 products) -->
-  <div class="product-card" data-category="handal-mug">
-    <img src="images/handal1.png" alt="Classic Handal Mug" />
-    <h4>Classic Handal Mug</h4>
-    <p class="price">₹299</p>
-    <div class="rating">⭐ 4.5 (30)</div>
-  </div>
-  <div class="product-card" data-category="handal-mug">
-    <img src="images/handal2.png" alt="Printed Handal Mug" />
-    <h4>Printed Handal Mug</h4>
-    <p class="price">₹349</p>
-    <div class="rating">⭐ 4.6 (25)</div>
-  </div>
-  <div class="product-card" data-category="handal-mug">
-    <img src="images/handal3.png" alt="Custom Handal Mug" />
-    <h4>Custom Handal Mug</h4>
-    <p class="price">₹399</p>
-    <div class="rating">⭐ 4.7 (28)</div>
-  </div>
-  <div class="product-card" data-category="handal-mug">
-    <img src="images/handal4.png" alt="Color Changing Handal Mug" />
-    <h4>Color Changing Handal Mug</h4>
-    <p class="price">₹450</p>
-    <div class="rating">⭐ 4.8 (22)</div>
-  </div>
-  <div class="product-card" data-category="handal-mug">
-    <img src="images/handal5.png" alt="Photo Print Handal Mug" />
-    <h4>Photo Print Handal Mug</h4>
-    <p class="price">₹420</p>
-    <div class="rating">⭐ 4.7 (26)</div>
-  </div>
+<!-- Handle Mug Products -->
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal1.png" alt="HHM-R" />
+  <h4>HHM-R – Red Heart Handle Mug</h4>
+  <p class="price">₹290.00</p>
+  <p>RED ♥️ HEART HANDLE MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20HHM-R" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal2.png" alt="WMUG" />
+  <h4>WMUG – White Ceramic Mug</h4>
+  <p class="price">₹230.00</p>
+  <p>A++ WHITE CERAMIC MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20WMUG" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal3.png" alt="CMUG" />
+  <h4>CMUG – Corporate Mug</h4>
+  <p class="price">₹200.00</p>
+  <p>6 Oz CORPORATE MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20CMUG" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal4.png" alt="CPM-R" />
+  <h4>CPM-R – Colour Patch Mug</h4>
+  <p class="price">₹320.00</p>
+  <p>COLOUR PATCH MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20CPM-R" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal5.png" alt="GMUG / SMUG" />
+  <h4>GMUG / SMUG – Metallic Mugs</h4>
+  <p class="price">₹320.00</p>
+  <p>METALLIC GOLDEN / SILVER MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20GMUG%20or%20SMUG" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal6.png" alt="PMW" />
+  <h4>PMW – Polymer Mug</h4>
+  <p class="price">₹320.00</p>
+  <p>11 Oz POLYMER MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PMW" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal7.png" alt="ICM-K" />
+  <h4>ICM-K – Inside Colour Handle Mug</h4>
+  <p class="price">₹280.00</p>
+  <p>INSIDE COLOUR WITH COLOUR HANDLE MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20ICM-K" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="handal-mug">
+  <img src="images/handal8.png" alt="HHMM-K" />
+  <h4>HHMM-K – Heart / Round Handle Mug</h4>
+  <p class="price">₹490.00</p>
+  <p>HEART HANDLE / ROUND HANDLE MUG</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20HHMM-K" target="_blank">Order Now</a>
+</div>
+
+
+
+
+
 
   <!-- Printing Tshirt (4 products) -->
-  <div class="product-card" data-category="printing-tshirt">
-    <img src="images/tshirt1.png" alt="Printed Cotton T-Shirt" />
-    <h4>Printed Cotton T-Shirt</h4>
-    <p class="price">₹599</p>
-    <div class="rating">⭐ 4.4 (40)</div>
-  </div>
-  <div class="product-card" data-category="printing-tshirt">
-    <img src="images/tshirt2.png" alt="Graphic Print T-Shirt" />
-    <h4>Graphic Print T-Shirt</h4>
-    <p class="price">₹650</p>
-    <div class="rating">⭐ 4.5 (38)</div>
-  </div>
+<!-- Printing T-Shirt Products -->
+
+<div class="product-card" data-category="printing-tshirt">
+  <img src="images/tshirt1.png" alt="TS-2" />
+  <h4>TS - 2 – Printed T-Shirt</h4>
+  <p class="price">₹99.00</p>
+  <p>Basic Printed T-Shirt</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20TS-2" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="printing-tshirt">
+  <img src="images/tshirt2.png" alt="TS-3" />
+  <h4>TS - 3 – Sublimation Printed T-Shirt</h4>
+  <p class="price">₹399.00</p>
+  <p>SUBLAMINATION TSHIRT PRINTING – ALL TYPE OF PRINTING AVAILABLE</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20TS-3" target="_blank">Order Now</a>
+</div>
+
   <div class="product-card" data-category="printing-tshirt">
     <img src="images/tshirt3.png" alt="Custom Printed T-Shirt" />
     <h4>Custom Printed T-Shirt</h4>
@@ -1308,25 +2069,38 @@ container.addEventListener('dragstart', (e) => e.preventDefault());
     <div class="rating">⭐ 4.7 (32)</div>
   </div>
 
+
+
   <!-- Promotion Tshirt (3 products) -->
-  <div class="product-card" data-category="promotion-tshirt">
-    <img src="images/promotion1.png" alt="Corporate Promotion T-Shirt" />
-    <h4>Corporate Promotion T-Shirt</h4>
-    <p class="price">₹650</p>
-    <div class="rating">⭐ 4.5 (20)</div>
-  </div>
-  <div class="product-card" data-category="promotion-tshirt">
-    <img src="images/promotion2.png" alt="Event Promotion T-Shirt" />
-    <h4>Event Promotion T-Shirt</h4>
-    <p class="price">₹670</p>
-    <div class="rating">⭐ 4.6 (18)</div>
-  </div>
-  <div class="product-card" data-category="promotion-tshirt">
-    <img src="images/promotion3.png" alt="Custom Logo Promotion T-Shirt" />
-    <h4>Custom Logo Promotion T-Shirt</h4>
-    <p class="price">₹690</p>
-    <div class="rating">⭐ 4.7 (22)</div>
-  </div>
+  <!-- Promotion T-Shirt Products -->
+
+<div class="product-card" data-category="promotion-tshirt">
+  <img src="images/promotion1.png" alt="PWT" />
+  <h4>PWT – White Promotion T-Shirt</h4>
+  <p class="price">₹199.00</p>
+  <p>WHITE PROMOTION T-SHIRT</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20PWT" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="promotion-tshirt">
+  <img src="images/promotion2.png" alt="TS-1" />
+  <h4>TS - 1 – Custom Promotion T-Shirt</h4>
+  <p class="price">₹99.00</p>
+  <p>PROMOTION T-SHIRT – Name, Photo & All Types of Printing Available</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20TS-1" target="_blank">Order Now</a>
+</div>
+
+<div class="product-card" data-category="promotion-tshirt">
+  <img src="images/promotion3.png" alt="TS-2" />
+  <h4>TS - 2 – Name/Shop Print T-Shirt</h4>
+  <p class="price">₹99.00</p>
+  <p>Name, Shop Name, Photo & All Types of Printing Available</p>
+  <p>RUPNIT PHOTOGRAPHY PRODUCTION PANDHURNA</p>
+  <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20TS-2" target="_blank">Order Now</a>
+</div>
+
 
   <!-- 3D/4D images (2 products) -->
   <div class="product-card" data-category="3d-4d">
@@ -1399,6 +2173,8 @@ container.addEventListener('dragstart', (e) => e.preventDefault());
     });
   });
 </script>
+
+
 
 </body>
 </html>
