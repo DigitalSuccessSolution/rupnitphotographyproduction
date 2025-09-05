@@ -191,289 +191,263 @@
 
 
 <!-- section 2  start-->
- <style>
-        @import url('/img/png_logo-removebg-preview.png' );
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #faf7f5;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .packages-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .logo-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0.03;
-            z-index: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath fill='%23800020' d='M40,80 C40,70 50,70 50,80 C50,90 40,90 40,80 M60,80 C60,70 70,70 70,80 C70,90 60,90 60,80 M80,80 C80,70 90,70 90,80 C90,90 80,90 80,80 M100,80 C100,70 110,70 110,80 C110,90 100,90 100,80 M120,80 C120,70 130,70 130,80 C130,90 120,90 120,80 M140,80 C140,70 150,70 150,80 C150,90 140,90 140,80'/%3E%3Cpath fill='%23800020' d='M50,40 C40,40 40,50 50,50 C60,50 60,40 50,40 M70,40 C60,40 60,50 70,50 C80,50 80,40 70,40 M90,40 C80,40 80,50 90,50 C100,50 100,40 90,40 M110,40 C100,40 100,50 110,50 C120,50 120,40 110,40 M130,40 C120,40 120,50 130,50 C140,50 140,40 130,40 M150,40 C140,40 140,50 150,50 C160,50 160,40 150,40'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            pointer-events: none;
-        }
-        
-        .section-title {
-            text-align: center;
-            color: #800020;
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            margin-bottom: 50px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #800020;
-            margin: 15px auto;
-        }
-        
-        .packages-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .package-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            width: 100%;
-            max-width: 350px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
-        
-        .package-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-        }
-        
-        .package-header {
-            background: linear-gradient(135deg, #800020, #a53860);
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-        }
-        
-        .package-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        
-        .package-price {
-            font-size: 28px;
-            font-weight: 500;
-        }
-        
-        .package-features {
-            padding: 0;
-        }
-        
-        .feature-item {
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .feature-item:nth-child(odd) {
-            background-color: #fef9fb;
-        }
-        
-        .feature-icon {
-            margin-right: 15px;
-            color: #800020;
-            font-size: 18px;
-            width: 24px;
-            text-align: center;
-        }
-        
-        .feature-text {
-            flex: 1;
-        }
-        
-        .included {
-            color: #2e8b57;
-        }
-        
-        .not-included {
-            color: #888;
-        }
-        
-        .footnote {
-            text-align: center;
-            margin-top: 40px;
-            font-weight: 500;
-            color: #555;
-            position: relative;
-            z-index: 1;
-            font-size: 16px;
-        }
-        
-        .ribbon {
-            position: absolute;
-            top: 15px;
-            right: -35px;
-            transform: rotate(45deg);
-            padding: 5px 40px;
-            font-size: 14px;
-            font-weight: 600;
-            color: white;
-            background-color: #d4af37;
-            z-index: 2;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .packages-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .package-card {
-                max-width: 100%;
-            }
-        }
-    </style>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    <section class="packages-container">
-        <div class="logo-bg"></div>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #faf7f5;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .packages-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.03;
+        z-index: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath fill='%23800020' d='M40,80 C40,70 50,70 50,80 C50,90 40,90 40,80 M60,80 C60,70 70,70 70,80 C70,90 60,90 60,80 M80,80 C80,70 90,70 90,80 C90,90 80,90 80,80 M100,80 C100,70 110,70 110,80 C110,90 100,90 100,80 M120,80 C120,70 130,70 130,80 C130,90 120,90 120,80 M140,80 C140,70 150,70 150,80 C150,90 140,90 140,80'/%3E%3Cpath fill='%23800020' d='M50,40 C40,40 40,50 50,50 C60,50 60,40 50,40 M70,40 C60,40 60,50 70,50 C80,50 80,40 70,40 M90,40 C80,40 80,50 90,50 C100,50 100,40 90,40 M110,40 C100,40 100,50 110,50 C120,50 120,40 110,40 M130,40 C120,40 120,50 130,50 C140,50 140,40 130,40 M150,40 C140,40 140,50 150,50 C160,50 160,40 150,40'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        pointer-events: none;
+    }
+
+    .section-title {
+        text-align: center;
+        color: #800020;
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-title:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #800020;
+        margin: 15px auto;
+    }
+
+    .packages-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .package-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 350px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+    }
+
+    .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .package-header {
+        background: linear-gradient(135deg, #800020, #a53860);
+        color: white;
+        padding: 25px 20px;
+        text-align: center;
+    }
+
+    .package-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .package-price {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .package-features {
+        padding: 0;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .feature-item:nth-child(odd) {
+        background-color: #fef9fb;
+    }
+
+    .feature-icon {
+        margin-right: 15px;
+        color: #800020;
+        font-size: 18px;
+        width: 24px;
+        text-align: center;
+    }
+
+    .feature-text {
+        flex: 1;
+    }
+
+    .included {
+        color: #2e8b57;
+    }
+
+    .not-included {
+        color: #888;
+    }
+
+    .footnote {
+        text-align: center;
+        margin-top: 40px;
+        font-weight: 500;
+        color: #555;
+        position: relative;
+        z-index: 1;
+        font-size: 16px;
+    }
+
+    .ribbon {
+        position: absolute;
+        top: 15px;
+        right: -35px;
+        transform: rotate(45deg);
+        padding: 5px 40px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        background-color: #d4af37;
+        z-index: 2;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .watermark {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: #800020;
         
-        <h2 class="section-title">Wedding & Reception Packages</h2>
-        
-        <div class="packages-grid">
-            <!-- Basic Package -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3 class="package-name">Basic</h3>
-                    <div class="package-price">₹ 49,999/-</div>
-                </div>
-                <ul class="package-features">
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Candid Photography</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Conventional Video</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
-                        <span class="feature-text">Cinematic Video</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
-                        <span class="feature-text">Conventional Photography</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
-                        <span class="feature-text">Drone (Reception Only)</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
-                        <span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span>
-                    </li>
-                </ul>
+        padding: 10px 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+        .packages-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .package-card {
+            max-width: 100%;
+        }
+    }
+
+    .watermark {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+</style>
+
+<section class="packages-container">
+    <div class="logo-bg"></div>
+
+    <h2 class="section-title">Wedding & Reception Packages</h2>
+
+    <div class="packages-grid">
+        <!-- Basic Package -->
+        <div class="package-card">
+            <div class="package-header">
+                <h3 class="package-name">Basic</h3>
+                <div class="package-price">₹ 49,999/-</div>
             </div>
-            
-            <!-- Premium Package -->
-            <div class="package-card">
-                <div class="ribbon">POPULAR</div>
-                <div class="package-header">
-                    <h3 class="package-name">average</h3>
-                    <div class="package-price">₹ 99,999/-</div>
-                </div>
-                <ul class="package-features">
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Candid Photography</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Conventional Video</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Cinematic Video</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Conventional Photography</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
-                        <span class="feature-text">Drone (Reception Only)</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span>
-                        <span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Luxury Package -->
-            <div class="package-card">
-                <div class="package-header">
-                    <h3 class="package-name">Premium</h3>
-                    <div class="package-price">₹ 1,49,999/-</div>
-                </div>
-                <ul class="package-features">
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Candid Photography</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Conventional Video</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Cinematic Video</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Conventional Photography</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">Drone (Reception Only)</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon"><i class="fas fa-check-circle included"></i></span>
-                        <span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span>
-                    </li>
-                </ul>
-            </div>
+            <ul class="package-features">
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Candid Photography</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Conventional Video</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span><span class="feature-text">Cinematic Video</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span><span class="feature-text">Conventional Photography</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span><span class="feature-text">Drone (Reception Only)</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span><span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span></li>
+            </ul>
+           <div class="watermark" style="display: flex;justify-content: center;align-items: center;">
+<img src="/img/png_logo-removebg-preview.png" style="height: 100px;">
+</div>
+
         </div>
-        
-        <p class="footnote">Two Days shoot, upto 8 hours each</p>
-    </section>
+
+        <!-- Average Package -->
+        <div class="package-card">
+            <div class="ribbon">POPULAR</div>
+            <div class="package-header">
+                <h3 class="package-name">Average</h3>
+                <div class="package-price">₹ 99,999/-</div>
+            </div>
+            <ul class="package-features">
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Candid Photography</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Conventional Video</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Cinematic Video</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Conventional Photography</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span><span class="feature-text">Drone (Reception Only)</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-times-circle not-included"></i></span><span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span></li>
+            </ul>
+        <div class="watermark" style="display: flex;justify-content: center;align-items: center;" >
+<img src="/img/png_logo-removebg-preview.png" style="height: 100px;">
+</div>
+
+        </div>
+
+        <!-- Premium Package -->
+        <div class="package-card">
+            <div class="package-header">
+                <h3 class="package-name">Premium</h3>
+                <div class="package-price">₹ 1,49,999/-</div>
+            </div>
+            <ul class="package-features">
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Candid Photography</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Conventional Video</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Cinematic Video</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Conventional Photography</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">Drone (Reception Only)</span></li>
+                <li class="feature-item"><span class="feature-icon"><i class="fas fa-check-circle included"></i></span><span class="feature-text">LED Wall Unit (6x4 feet) (Reception Only)</span></li>
+            </ul>
+<div class="watermark" style="display: flex;justify-content: center;align-items: center;">
+<img src="/img/png_logo-removebg-preview.png" style="height: 100px;">
+</div>
+        </div>
+    </div>
+
+    <p class="footnote">Two Days shoot, upto 8 hours each</p>
+</section>
+
 
 <!-- section 2  end-->
 
