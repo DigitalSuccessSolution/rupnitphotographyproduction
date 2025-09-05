@@ -323,7 +323,7 @@
 
     <!-- Hidden images (show on mobile toggle) -->
     <div class="card hidden-img">
-      <a href="#"><img class="gallery-img" src="https://images.unsplash.com/photo-1506241537529-eefea1fbe44d?w=600&auto=format&fit=crop&q=60" alt="Wedding Photoshoot image" /></a>
+      <a href="#"><img class="gallery-img" src="img/studio 3.jpeg" alt="Wedding Photoshoot image" /></a>
     </div>
 
     <div class="card hidden-img">
@@ -331,14 +331,14 @@
     </div>
 
     <div class="card hidden-img">
-      <a href="#"><img class="gallery-img" src="https://images.unsplash.com/photo-1488684430052-f2d92fb178c2?w=600&auto=format&fit=crop&q=60" alt="Bride's feet photo" /></a>
+      <a href="#"><img class="gallery-img" src="img/studio 1.jpeg" alt="Bride's feet photo" /></a>
     </div>
   </div>
 
   <!-- Last Image Full Width -->
   <div class="card mb-3">
     <a href="#">
-      <img src="https://plus.unsplash.com/premium_photo-1682097066897-209d0d9e9ae5?w=600&auto=format&fit=crop&q=60" alt="Black and white photoshoot" style="width:100%; height:auto;" />
+      <img src="img/studio.jpeg" alt="Black and white photoshoot" style="width:100%; height:auto;" />
     </a>
   </div>
 
@@ -809,6 +809,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 padding: 40px 20px;
             }
         }
+
+
+
+   .service-card {
+    position: relative; /* logo ko absolute karne ke liye reference */
+}
+
+/* Logo Top Right Corner */
+.service-logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2; /* overlay ke upar rahe */
+}
+
+.service-logo img {
+    max-width: 70px;  /* size adjust */
+    height: auto;
+     /* optional: circle */
+    /* background: white; optional: contrast ke liye */
+    padding: 5px;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.2); */
+}
+
+
     </style>
  <!-- our service css -->
 
@@ -821,30 +846,49 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         
         <div class="services-grid">
-            <!-- Pre-Wedding Photography -->
-            <div class="service-card">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1531736275454-adc48d079ce9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
-                <div class="service-overlay">
-                    <h3 class="service-title"><a href="./pre-wedding-photographer-in-bangalore/">Pre-Wedding Photography</a></h3>
-                    <div class="service-button">
-                        <a href="pre-wedding.html">View more</a>
-                    </div>
-                </div>
-            </div>
-            
+    <!-- Pre-Wedding Photography -->
+<div class="service-card">
+    <!-- Background Image -->
+    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1531736275454-adc48d079ce9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+    
+    <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
+
+    <!-- Overlay Content -->
+    <div class="service-overlay">
+        <h3 class="service-title">
+            <a href="./pre-wedding-photographer-in-bangalore/">Pre-Wedding Photography</a>
+        </h3>
+        <div class="service-button">
+            <a href="pre-wedding.html">View more</a>
+        </div>
+    </div>
+</div>
+
             <!-- Wedding Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./wedding-photographer-in-bangalore/">Wedding Photography</a></h3>
                     <div class="service-button">
                         <a href="wedding.html">View more</a>
                     </div>
+                    
                 </div>
             </div>
             
             <!-- Maternity Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>   
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./maternity-photographer-in-bangalore/">Maternity Photography</a></h3>
@@ -856,6 +900,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Birthday Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./birthday-photographer-in-bangalore/">Birthday Photography</a></h3>
@@ -867,6 +915,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Maternity Photoshoot @ Studio -->
             <div class="service-card" >
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1549902529-a515ecc7630f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/maternityphotoshootstudio/">Maternity Photoshoot @ Studio</a></h3>
@@ -878,6 +930,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Housewarming Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/housewarming-photographer-in-bangalore/">Housewarming Photography</a></h3>
@@ -889,6 +945,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Christian Wedding Photographer -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1497215845224-decde3307d0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/christian-wedding-photographer-in-bangalore/">Christian Wedding Photographer</a></h3>
@@ -900,6 +960,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Muslim Wedding Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730cefb9f6c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/muslim-wedding-photographer-in-bangalore/">Muslim Wedding Photography</a></h3>
@@ -911,6 +975,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Upanayanam Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/upanayanam-photography-bangalore/">Upanayanam Photography</a></h3>
@@ -922,6 +990,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Engagement Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1519692933481-e162a57d6721?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/engagement-photographer-in-bagalore/">Engagement Photography</a></h3>
@@ -933,6 +1005,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Naming Ceremony Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/naming-ceremony-photographer-in-bangalore/">Naming Ceremony Photography</a></h3>
@@ -944,6 +1020,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Wedding Recreation -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./wedding-recreation-bangalore/">Wedding Recreation</a></h3>
@@ -955,6 +1035,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Temple Wedding Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1580502304784-8985b7eb7260?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/temple-wedding-photographers-in-bangalore/">Temple Wedding Photography</a></h3>
@@ -966,6 +1050,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Wedding @ Elements -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./weddingelements/">Wedding @ Elements</a></h3>
@@ -977,6 +1065,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Newborn Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1534367507877-0edd93bd013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/newborn-photographer-in-bangalore/">Newborn Photography</a></h3>
@@ -988,6 +1080,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Baby shower Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1512675828443-4f454c42253a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/babyshower-photographer-in-bangalore/">Baby shower Photography</a></h3>
@@ -999,6 +1095,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Photography Service at Mysore -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./mysore-photographers/">Photography Service at Mysore</a></h3>
@@ -1010,6 +1110,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Photography Service at Jayanagar -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./jayanagar-bangalore/">Photography Service at Jayanagar</a></h3>
@@ -1021,6 +1125,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Kerala wedding photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730cefb9f6c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/kerala-wedding-photography/">Kerala wedding photography</a></h3>
@@ -1032,6 +1140,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Cinematography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="./rupnitphotographyproduction.in/cinematographer-in-bangalore/">Cinematography</a></h3>
@@ -1043,6 +1155,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Corporate Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/corporate-photographer-in-bangalore/">Corporate Photography</a></h3>
@@ -1054,6 +1170,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Corporate Headshot Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/corporate-headshots-photographers-in-bangalore/">Corporate Headshot Photography</a></h3>
@@ -1065,6 +1185,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Model Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/model-photographer-in-bangalore/">Model Photography</a></h3>
@@ -1076,6 +1200,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Food Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/food-photographer-in-bagalore/">Food Photography</a></h3>
@@ -1087,6 +1215,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Architectural Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/architectural-photographer-in-bangalore/">Architectural Photography</a></h3>
@@ -1098,6 +1230,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Puberty function Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/puberty-function-photographers-in-bangalore/">Puberty function Photography</a></h3>
@@ -1109,6 +1245,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Golden or Silver Jubilee Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/golden-jubilee-or-silver-jubilee-photographer-in-bangalore/">Golden or Silver Jubilee Photography</a></h3>
@@ -1120,6 +1260,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Store inauguration event Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1563013541-5afc0538a8c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/store-inauguration-event-photography/">Store inauguration event Photography</a></h3>
@@ -1131,6 +1275,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Family Portrait Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/family-portrait-photography/">Family Portrait Photography</a></h3>
@@ -1142,6 +1290,10 @@ document.addEventListener("DOMContentLoaded", function() {
             
             <!-- Post Wedding Photography -->
             <div class="service-card">
+                  <!-- Logo Top Right -->
+    <div class="service-logo">
+        <img src="img/logo 1.psd (3).png" alt="Company Logo">
+    </div>
                 <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
                 <div class="service-overlay">
                     <h3 class="service-title"><a href="https://rupnitphotographyproduction.in/post-wedding-photographer-in-bangalore/">Post Wedding Photography</a></h3>

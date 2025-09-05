@@ -500,6 +500,7 @@
 
 <!-- about section end -->
 
+<!-- Owner Section -->
 <section class="owner-section">
     <!-- Image Section -->
     <div class="owner-image">
@@ -518,6 +519,27 @@
     </div>
 </section>
 
+
+<!-- Editor Section -->
+<section class="editor-section">
+    <!-- Image Section -->
+    <div class="editor-image">
+        <div class="image-shadow"></div>
+        <img src="img/NITESH (4).jpg" 
+             alt="Editor - Rupnit Photography Production">
+    </div>
+
+    <!-- Content Section -->
+    <div class="editor-content">
+        <span class="section-tag">Editor</span>
+        <h2>NITESH DHARPURE</h2>
+        <p>
+            The vision may be captured through the lens, but it comes alive in the editing room. Our editor is the soul of post-production — transforming raw footage into cinematic stories. With expertise in color grading, sound design, and seamless transitions, every frame is polished to perfection. His dedication ensures that every project reflects emotions, creativity, and timeless artistry.
+        </p>
+    </div>
+</section>
+
+
 <style>
     :root {
         --primary-dark: #800020;
@@ -526,7 +548,9 @@
         --text-light: #5a5a5a;
     }
 
-    .owner-section {
+    /* Shared Styling for Owner & Editor */
+    .owner-section,
+    .editor-section {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -542,9 +566,11 @@
         overflow: hidden;
     }
 
-    /* Top & Bottom Gradient Borders */
+    /* Gradient Borders */
     .owner-section::before,
-    .owner-section::after {
+    .owner-section::after,
+    .editor-section::before,
+    .editor-section::after {
         content: '';
         position: absolute;
         left: 0;
@@ -553,19 +579,23 @@
         background: linear-gradient(to right, var(--primary-dark), var(--primary-gold));
     }
 
-    .owner-section::before {
+    .owner-section::before,
+    .editor-section::before {
         top: 0;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
 
-    .owner-section::after {
+    .owner-section::after,
+    .editor-section::after {
         bottom: 0;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
 
-    .owner-image {
+    /* Image Box */
+    .owner-image,
+    .editor-image {
         flex: 1 1 350px;
         max-width: 400px;
         display: flex;
@@ -585,7 +615,8 @@
         transform: translateY(10px);
     }
 
-    .owner-image img {
+    .owner-image img,
+    .editor-image img {
         width: 280px;
         height: 280px;
         border-radius: 50%;
@@ -595,7 +626,9 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
 
-    .owner-content {
+    /* Content Box */
+    .owner-content,
+    .editor-content {
         flex: 1 1 400px;
         max-width: 500px;
         color: var(--text-dark);
@@ -612,7 +645,8 @@
         display: block;
     }
 
-    .owner-content h2 {
+    .owner-content h2,
+    .editor-content h2 {
         font-family: 'Cormorant Garamond', serif;
         font-size: 2.5rem;
         font-weight: 700;
@@ -624,7 +658,8 @@
         position: relative;
     }
 
-    .owner-content h2::after {
+    .owner-content h2::after,
+    .editor-content h2::after {
         content: '';
         position: absolute;
         bottom: -10px;
@@ -635,43 +670,49 @@
         border-radius: 2px;
     }
 
-    .owner-content p {
+    .owner-content p,
+    .editor-content p {
         font-size: 1.1rem;
         color: var(--text-light);
         line-height: 1.8;
         margin-bottom: 30px;
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
-        .owner-section {
+        .owner-section,
+        .editor-section {
             flex-direction: column;
             text-align: center;
             padding: 40px 30px;
             gap: 40px;
         }
 
-        .owner-content h2 {
+        .owner-content h2,
+        .editor-content h2 {
             font-size: 2rem;
         }
     }
 
     @media (max-width: 480px) {
         .image-shadow,
-        .owner-image img {
+        .owner-image img,
+        .editor-image img {
             width: 200px;
             height: 200px;
         }
 
-        .owner-content h2 {
+        .owner-content h2,
+        .editor-content h2 {
             font-size: 1.8rem;
         }
 
-        .owner-content p {
+        .owner-content p,
+        .editor-content p {
             font-size: 1rem;
         }
     }
 </style>
-
 
 
 
